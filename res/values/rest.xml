@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="account_type">com.brightleafsoftware.casephotographer</string>
+	<string name="oauth_callback_url">sfdc://success</string>
+	<string name="oauth_client_id">3MVG9y6x0357HlefSr_eqmxsyROW0xvcowvM5021EscAQamug37ArSoW7soNVrGP2iiZD_R5TOinzyYo5ZxJp</string>
+	<string name="api_version">v23.0</string>
+</resources>

@@ -1,0 +1,3 @@
+<resources>
+    <item type="layout" name="activity_case_list">@layout/activity_case_twopane</item>
+</resources>

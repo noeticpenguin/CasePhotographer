@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ParserError">
+        <ignore path="src/com/brightleafsoftware/casephotographer/CaseDetailFragment.java" />
+    </issue>
+</lint>

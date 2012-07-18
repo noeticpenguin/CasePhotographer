@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Case Photographer</string>
+    <string name="welcome">Welcome %s</string>
+    <string name="logout_button">Logout</string>
+    <string name="menu_settings">Settings</string>
+    <string name="logout_title">Are you sure?</string>
+    <string name="logout_yes">Yes</string>
+    <string name="logout_cancel">Cancel</string>
+    <string name="logout_message">Are you sure you wish to Logout? If you logout you will have to re-authenticate before accessing any cases, chatter feeds or photographs!</string>
+    <string name="title_case_detail">Case Detail</string>
+    <string name="title_case_list">Cases</string>
+    <string name="test">test</string>
+    <string name="NoImagesAtThisTime">At this time, there are no images attached to this case.</string>
+    <string name="search_action_mode_title">Search for case</string>
+    <string name="searchHint">Search Text</string>
+    <string name="icon">icon</string>
+    <string name="dismiss">Dismiss</string>
+
+</resources>

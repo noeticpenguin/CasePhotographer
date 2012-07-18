@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.brightleafsoftware.casephotographer"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- device os versions http://developer.android.com/guide/publishing/versioning.html -->
+    <uses-sdk android:minSdkVersion="14" />
+
+    <application
+        android:name=".CasePhotographer"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.Holo" >
+
+        <!-- Service required for authentication -->
+        <service
+            android:name="com.salesforce.androidsdk.auth.AuthenticatorService"
+            android:exported="true"
+            android:permission="android.permission.INTERNET"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- Launcher screen -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- Login activity -->
+        <activity
+            android:name="com.salesforce.androidsdk.ui.LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- Passcode activity -->
+        <activity
+            android:name="com.salesforce.androidsdk.ui.PasscodeActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Choose server activity -->
+        <activity
+            android:name="com.salesforce.androidsdk.ui.ServerPickerActivity"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".CaseListActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CaseDetailActivity"
+            android:label="@string/title_case_detail" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CaseListActivity" />
+        </activity>
+    </application>
+
+</manifest>
