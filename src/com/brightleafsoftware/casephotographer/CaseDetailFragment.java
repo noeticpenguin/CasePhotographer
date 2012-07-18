@@ -21,6 +21,8 @@ import com.salesforce.androidsdk.rest.RestRequest;
 import com.salesforce.androidsdk.rest.RestResponse;
 import com.salesforce.androidsdk.security.PasscodeManager;
 
+import com.brightleafsoftware.casephotographer.HorizontalListView;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
@@ -52,6 +54,7 @@ public class CaseDetailFragment extends Fragment {
 	private SFImageAdapter adapter;
 	private ArrayList<String> images;
 	private View rootView;
+
 	public CaseDetailFragment() {
 	}
 
@@ -75,7 +78,7 @@ public class CaseDetailFragment extends Fragment {
 		super.onAttach(activity);
 		wait = new ProgressDialog(getActivity());
 	}
-	
+
 	public JSONArray parseIntoJSONArray(AsyncForceRequest afr) {
 		JSONArray retval = null;
 		try {
@@ -87,7 +90,7 @@ public class CaseDetailFragment extends Fragment {
 		}
 		return retval;
 	}
-	
+
 	public ArrayList<String> parseIntoArrayList(AsyncBinaryForceRequest afr) {
 		ArrayList<String> retval = null;
 		try {
@@ -111,24 +114,30 @@ public class CaseDetailFragment extends Fragment {
 		}
 
 		// Setup the ui.
-		rootView = inflater.inflate(R.layout.fragment_case_detail,
-				container, false);
+		rootView = inflater.inflate(R.layout.fragment_case_detail, container,
+				false);
 
 		getDataForFragmentView();
-		
-		// Grab the horizontal list view to show the images.
-		HorizontalListView caseImages = (HorizontalListView) rootView
-				.findViewById(R.id.HLV);
-		caseImages.setVisibility(View.VISIBLE); //make it visible
 		adapter = new SFImageAdapter(getActivity(), images);
-		caseImages.setAdapter(adapter); //set it's Adapter!
+		if (images.size() > 0) {
+			// Grab the horizontal list view to show the images.
+			HorizontalListView caseImages = (HorizontalListView) rootView
+					.findViewById(R.id.HLV);
+			caseImages.setVisibility(View.VISIBLE); // make it visible
+
+			caseImages.setAdapter(adapter); // set it's Adapter!
+		} else {
+			TextView tv = (TextView) rootView
+					.findViewById(R.id.noImagesAtThisTime);
+			tv.setVisibility(View.VISIBLE);
+		}
 
 		if (caseRecord != null) {
 			JSONObject cr = null;
 			int altRowCounter = 0;
 			TableLayout table = (TableLayout) rootView
 					.findViewById(R.id.case_detail);
-			
+
 			try {
 				cr = caseRecord.getJSONObject(0);
 			} catch (JSONException e) {
@@ -160,8 +169,7 @@ public class CaseDetailFragment extends Fragment {
 			// create a new TableRow
 			TableRow row = new TableRow(getActivity());
 			if (altRowCounter % 2 == 0) {
-				row.setBackgroundColor(getResources().getColor(
-						R.color.altrow));
+				row.setBackgroundColor(getResources().getColor(R.color.altrow));
 			}
 			// create a new TextView
 			TextView keyTV = new TextView(getActivity());
@@ -172,8 +180,7 @@ public class CaseDetailFragment extends Fragment {
 			valueTV.setSingleLine(false);
 			valueTV.setHorizontallyScrolling(false);
 			valueTV.setLayoutParams(new TableRow.LayoutParams(
-					LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,
-					1f));
+					LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1f));
 			valueTV.setText(value);
 			// add the TextView and the CheckBox to the new TableRow
 			row.addView(keyTV);
@@ -190,14 +197,14 @@ public class CaseDetailFragment extends Fragment {
 		// 1: get the case details
 		// 2: get a list of attachment objects with this case ID as the ParentId
 		// 3: Snag the actual attachments.
-		
+
 		caseDetailsAFR = new AsyncForceRequest()
 				.execute(getCaseDetailsRequest());
 		caseRecord = parseIntoJSONArray((AsyncForceRequest) caseDetailsAFR);
 		// Fetches the list of attached objects.
 		imageDetailsAFR = new AsyncForceRequest()
 				.execute(getCaseImagesRequest());
-		JSONArray imageDetails = parseIntoJSONArray( (AsyncForceRequest) imageDetailsAFR);
+		JSONArray imageDetails = parseIntoJSONArray((AsyncForceRequest) imageDetailsAFR);
 
 		int numOfImagesToFetch = (imageDetails != null) ? imageDetails.length()
 				: 0;
@@ -214,7 +221,8 @@ public class CaseDetailFragment extends Fragment {
 						path, null);
 			}
 		}
-		images = parseIntoArrayList( (AsyncBinaryForceRequest) new AsyncBinaryForceRequest().execute(imageRequests));
+		images = parseIntoArrayList((AsyncBinaryForceRequest) new AsyncBinaryForceRequest()
+				.execute(imageRequests));
 	}
 
 	private void startIndeterminateProgressDialog() {
@@ -264,14 +272,22 @@ public class CaseDetailFragment extends Fragment {
 		super.onResume();
 	}
 
-	public void refreshImages(){
+	public void refreshImages() {
 		adapter.notifyDataSetInvalidated();
 		getDataForFragmentView();
-		adapter.setImages(images);
-		adapter.notifyDataSetChanged();
+		if(images.size() > 0 ) {
+			adapter.setImages(images);
+			HorizontalListView caseImages = (HorizontalListView) rootView
+					.findViewById(R.id.HLV);
+			caseImages.setVisibility(View.VISIBLE);
+			caseImages.setAdapter(adapter);
+			TextView tv = (TextView) rootView
+					.findViewById(R.id.noImagesAtThisTime);
+			tv.setVisibility(View.GONE);
+		}
 		rootView.invalidate();
 	}
-	
+
 	private class AsyncForceRequest extends
 			AsyncTask<RestRequest, Integer, JSONArray> {
 		ProgressDialog pd = new ProgressDialog(getActivity());
@@ -351,7 +367,8 @@ public class CaseDetailFragment extends Fragment {
 				fOut.flush();
 				fOut.close();
 			} catch (FileNotFoundException e) {
-				Log.e(TAG, "FILE NOT FOUND " + file.getAbsolutePath().toString(), e);
+				Log.e(TAG, "FILE NOT FOUND "
+						+ file.getAbsolutePath().toString(), e);
 			} catch (IOException e) {
 				Log.e(TAG, "IO Exception", e);
 			}

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+    <issue id="IconDuplicatesConfig">
+        <ignore path="res/drawable/sf__header_bg.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="res/drawable/sf__header_bg.png" />
+    </issue>
+    <issue id="NestedWeights">
+        <ignore path="res/layout-xlarge/listitem.xml" />
+        <ignore path="res/layout/listitem.xml" />
+    </issue>
+    <issue id="OnClick">
+        <ignore path="res/layout-xlarge/sf__login_header.xml" />
+        <ignore path="res/layout-xlarge/sf__server_picker.xml" />
+        <ignore path="res/layout-xlarge/sf__server_picker_header.xml" />
+    </issue>
     <issue id="ParserError">
         <ignore path="src/com/brightleafsoftware/casephotographer/CaseDetailFragment.java" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="res/values/sf__strings.xml" />
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout-xlarge/sf__login.xml" />
+        <ignore path="res/layout-xlarge/sf__login_header.xml" />
+        <ignore path="res/layout-xlarge/sf__server_picker_header.xml" />
     </issue>
 </lint>

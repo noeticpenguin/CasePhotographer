@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sf__oauth_background"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:ignore="Overdraw" >
 
     <include layout="@layout/sf__login_header" />
 
@@ -14,8 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" 
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="412dp"
@@ -49,4 +50,5 @@
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
+
 </LinearLayout>

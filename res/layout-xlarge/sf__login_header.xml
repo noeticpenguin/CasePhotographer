@@ -26,10 +26,16 @@
 				android:layout_centerVertical="true"
 				android:layout_alignParentLeft="true"/>
 					
-				<ImageView android:id="@+id/sf__reload_page" android:src="@drawable/sf__header_refresh_states"
-					android:layout_width="60dp" android:layout_height="fill_parent"
-					android:scaleType="fitCenter" android:layout_alignParentRight="true"
-					android:clickable="true" android:onClick="onReloadClick" />
+				<ImageView
+				    android:id="@+id/sf__reload_page"
+				    android:layout_width="60dp"
+				    android:layout_height="fill_parent"
+				    android:layout_alignParentRight="true"
+				    android:clickable="true"
+				    android:contentDescription="@string/icon"
+				    android:onClick="onReloadClick"
+				    android:scaleType="fitCenter"
+				    android:src="@drawable/sf__header_refresh_states" />
 					
 				<LinearLayout 
 					android:id="@+id/sf__seperator"

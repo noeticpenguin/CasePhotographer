@@ -8,7 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -29,6 +29,7 @@ public class SFImageAdapter extends BaseAdapter {
 
 	public void setImages(ArrayList<String> incoming) {
 		this.images = incoming;
+		notifyDataSetChanged();
 	}
 	
 	public int getCount() {
@@ -78,11 +79,11 @@ public class SFImageAdapter extends BaseAdapter {
 		}
 
 		((ImageView) v).setImageBitmap(getThumb(images.get(position),THUMBNAIL_SIZE));
-		v.setOnClickListener(new zoomClickListener(position));
+		v.setOnLongClickListener(new zoomClickListener(position));
 		return v;
 	}
 
-	private class zoomClickListener implements OnClickListener {
+	private class zoomClickListener implements OnLongClickListener {
 
 		private int position;
 
@@ -90,12 +91,14 @@ public class SFImageAdapter extends BaseAdapter {
 			this.position = position;
 		}
 
-		public void onClick(View v) {
+		@Override
+		public boolean onLongClick(View v) {
 			ImageView zoomView = new ImageView(ctx);
 			zoomView.setImageBitmap(getThumb(images.get(position),ZOOM_SIZE));
 			AlertDialog zoomImage = new AlertDialog.Builder(ctx).setView(zoomView)
 					.setNegativeButton(R.string.dismiss, null).create();
 			zoomImage.show();
+			return false;
 		}
 
 	}
