@@ -17,5 +17,8 @@
     <string name="searchHint">Search Text</string>
     <string name="icon">icon</string>
     <string name="dismiss">Dismiss</string>
+    <string name="aboutDialogTitle">About CasePhotographer</string>
+    <string name="aboutDialogBody"><![CDATA[CasePhotographer </br> Version 1.0 <p>Copyright© 2012, Kevin Poorman. </p><p>Support: <a href="mailto:casePhotographer@brightleafsoftware.com"> casePhotographer@brightleafsoftware.com </a> </p><p> Please rate in the Play Market! </p>]]></string>
+    <string name="aboutDismiss">Dismiss</string>
 
 </resources>

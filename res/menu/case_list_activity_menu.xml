@@ -11,5 +11,10 @@
         android:showAsAction="always"
         android:title="Search">
     </item>
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/about"
+        android:showAsAction="ifRoom"
+        android:title="About"/>
 
 </menu>

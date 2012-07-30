@@ -1,5 +1,6 @@
 package com.brightleafsoftware.casephotographer;
 
+import com.flurry.android.FlurryAgent;
 import com.salesforce.androidsdk.app.ForceApp;
 import com.salesforce.androidsdk.rest.RestClient;
 import com.salesforce.androidsdk.security.PasscodeManager;
@@ -7,7 +8,7 @@ import com.salesforce.androidsdk.security.PasscodeManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ListFragment;
 import android.content.Context;
@@ -16,6 +17,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
+import android.text.Html;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
@@ -24,6 +26,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 @SuppressWarnings("unused")
@@ -35,9 +39,11 @@ public class CaseListActivity extends FragmentActivity implements
 	private AlertDialog logoutConfirmationDialog;
 	private static final int LOGOUT_DIALOG_ID = 1;
 	private static final String TAG = "CasePhotographer/CaseListActivity";
+	private static final int ABOUT_DIALOG_ID = 2;
 	private RestClient rc;
 	private ActionMode mMode;
 	private String soslSearchString;
+	private CaseDetailFragment cdf;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -58,10 +64,19 @@ public class CaseListActivity extends FragmentActivity implements
 		if (mTwoPane) {
 			Bundle arguments = new Bundle();
 			arguments.putString(CaseDetailFragment.ARG_ITEM_ID, id);
-			CaseDetailFragment fragment = new CaseDetailFragment();
-			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.case_detail_container, fragment).commit();
+			FragmentManager fm = getSupportFragmentManager();
+			android.support.v4.app.FragmentTransaction ft = fm
+					.beginTransaction();
+
+			if (cdf != null) {
+				cdf = new CaseDetailFragment();
+				ft.replace(R.id.case_detail_container, cdf, "CaseDetails");
+			} else {
+				cdf = new CaseDetailFragment();
+				ft.add(R.id.case_detail_container, cdf, "CaseDetails");
+			}
+			cdf.setArguments(arguments);
+			ft.commit();
 		} else {
 			Intent detailIntent = new Intent(this, CaseDetailActivity.class);
 			detailIntent.putExtra(CaseDetailFragment.ARG_ITEM_ID, id);
@@ -87,6 +102,14 @@ public class CaseListActivity extends FragmentActivity implements
 							}).setNegativeButton(R.string.logout_cancel, null)
 					.create();
 			return logoutConfirmationDialog;
+		case ABOUT_DIALOG_ID:
+			LinearLayout view = (LinearLayout) View.inflate(this, R.layout.about, null);
+			TextView tv = (TextView) view.findViewById(R.id.message);
+			tv.setText(Html.fromHtml(getString(R.string.aboutDialogBody)));
+			AlertDialog aboutDialog = new AlertDialog.Builder(this)
+					.setView(view)
+					.setNegativeButton(R.string.aboutDismiss, null).create();
+			return aboutDialog;
 		}
 		return super.onCreateDialog(id);
 	}
@@ -107,7 +130,14 @@ public class CaseListActivity extends FragmentActivity implements
 			showDialog(LOGOUT_DIALOG_ID);
 			break;
 		case R.id.search:
+			FlurryAgent.logEvent("Search Action Mode Initiated");
 			mMode = startActionMode(new SearchActionMode());
+			break;
+		case R.id.menu_new_picture:
+			cdf.fireTakePictureIntent();
+			break;
+		case R.id.menu_about:
+			showDialog(ABOUT_DIALOG_ID);
 			break;
 		default:
 			Toast.makeText(this, "Got click: " + item.getItemId(),
@@ -139,7 +169,8 @@ public class CaseListActivity extends FragmentActivity implements
 		public boolean onCreateActionMode(ActionMode mode, Menu menu) {
 			View sb = li.inflate(R.layout.searchbar, null);
 			sb.findViewById(R.id.etsearchbar).requestFocus();
-			imm.toggleSoftInput(R.id.etsearchbar, InputMethodManager.SHOW_IMPLICIT);
+			imm.toggleSoftInput(R.id.etsearchbar,
+					InputMethodManager.SHOW_IMPLICIT);
 			mode.setCustomView(sb.findViewById(R.id.etsearchbar));
 			menu.add(R.string.search_action_mode_title)
 					.setIcon(R.drawable.search)
