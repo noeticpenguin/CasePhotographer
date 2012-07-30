@@ -1,0 +1,200 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment: Fragment()
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity
+android.support.v4.app.FragmentActivity: FragmentActivity()
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.ListFragment: ListFragment()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip
+android.support.v4.view.PagerTabStrip: PagerTabStrip(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager$LayoutParams
+android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+com.brightleafsoftware.casephotographer.CaseDetailActivity
+com.brightleafsoftware.casephotographer.CaseDetailActivity: CaseDetailActivity()
+com.brightleafsoftware.casephotographer.CaseListActivity
+com.brightleafsoftware.casephotographer.CaseListActivity: CaseListActivity()
+com.brightleafsoftware.casephotographer.CaseListFragment
+com.brightleafsoftware.casephotographer.CaseListFragment: CaseListFragment()
+com.brightleafsoftware.casephotographer.CasePhotographer
+com.brightleafsoftware.casephotographer.CasePhotographer: CasePhotographer()
+com.brightleafsoftware.casephotographer.HorizontalListView
+com.brightleafsoftware.casephotographer.HorizontalListView: HorizontalListView(android.content.Context,android.util.AttributeSet)
+com.google.common.base.CaseFormat: com.google.common.base.CaseFormat[] values()
+com.google.common.base.CaseFormat: com.google.common.base.CaseFormat valueOf(java.lang.String)
+com.google.common.base.Equivalences$Impl: com.google.common.base.Equivalences$Impl[] values()
+com.google.common.base.Equivalences$Impl: com.google.common.base.Equivalences$Impl valueOf(java.lang.String)
+com.google.common.base.Functions$IdentityFunction: com.google.common.base.Functions$IdentityFunction[] values()
+com.google.common.base.Functions$IdentityFunction: com.google.common.base.Functions$IdentityFunction valueOf(java.lang.String)
+com.google.common.base.Functions$ToStringFunction: com.google.common.base.Functions$ToStringFunction[] values()
+com.google.common.base.Functions$ToStringFunction: com.google.common.base.Functions$ToStringFunction valueOf(java.lang.String)
+com.google.common.base.Predicates$ObjectPredicate: com.google.common.base.Predicates$ObjectPredicate[] values()
+com.google.common.base.Predicates$ObjectPredicate: com.google.common.base.Predicates$ObjectPredicate valueOf(java.lang.String)
+com.google.common.base.Splitter$AbstractIterator$State: com.google.common.base.Splitter$AbstractIterator$State[] values()
+com.google.common.base.Splitter$AbstractIterator$State: com.google.common.base.Splitter$AbstractIterator$State valueOf(java.lang.String)
+com.google.common.base.Suppliers$SupplierFunction: com.google.common.base.Suppliers$SupplierFunction[] values()
+com.google.common.base.Suppliers$SupplierFunction: com.google.common.base.Suppliers$SupplierFunction valueOf(java.lang.String)
+com.google.common.collect.AbstractIterator$State: com.google.common.collect.AbstractIterator$State[] values()
+com.google.common.collect.AbstractIterator$State: com.google.common.collect.AbstractIterator$State valueOf(java.lang.String)
+com.google.common.collect.Constraints$NotNullConstraint: com.google.common.collect.Constraints$NotNullConstraint[] values()
+com.google.common.collect.Constraints$NotNullConstraint: com.google.common.collect.Constraints$NotNullConstraint valueOf(java.lang.String)
+com.google.common.collect.CustomConcurrentHashMap$EntryFactory: com.google.common.collect.CustomConcurrentHashMap$EntryFactory[] values()
+com.google.common.collect.CustomConcurrentHashMap$EntryFactory: com.google.common.collect.CustomConcurrentHashMap$EntryFactory valueOf(java.lang.String)
+com.google.common.collect.CustomConcurrentHashMap$NullEntry: com.google.common.collect.CustomConcurrentHashMap$NullEntry[] values()
+com.google.common.collect.CustomConcurrentHashMap$NullEntry: com.google.common.collect.CustomConcurrentHashMap$NullEntry valueOf(java.lang.String)
+com.google.common.collect.CustomConcurrentHashMap$Strength: com.google.common.collect.CustomConcurrentHashMap$Strength[] values()
+com.google.common.collect.CustomConcurrentHashMap$Strength: com.google.common.collect.CustomConcurrentHashMap$Strength valueOf(java.lang.String)
+com.google.common.collect.MapConstraints$NotNullMapConstraint: com.google.common.collect.MapConstraints$NotNullMapConstraint[] values()
+com.google.common.collect.MapConstraints$NotNullMapConstraint: com.google.common.collect.MapConstraints$NotNullMapConstraint valueOf(java.lang.String)
+com.google.common.collect.MapMaker$NullListener: com.google.common.collect.MapMaker$NullListener[] values()
+com.google.common.collect.MapMaker$NullListener: com.google.common.collect.MapMaker$NullListener valueOf(java.lang.String)
+com.google.common.collect.SortedLists$Relation: com.google.common.collect.SortedLists$Relation[] values()
+com.google.common.collect.SortedLists$Relation: com.google.common.collect.SortedLists$Relation valueOf(java.lang.String)
+com.google.common.primitives.Booleans$LexicographicalComparator: com.google.common.primitives.Booleans$LexicographicalComparator[] values()
+com.google.common.primitives.Booleans$LexicographicalComparator: com.google.common.primitives.Booleans$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Chars$LexicographicalComparator: com.google.common.primitives.Chars$LexicographicalComparator[] values()
+com.google.common.primitives.Chars$LexicographicalComparator: com.google.common.primitives.Chars$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Doubles$LexicographicalComparator: com.google.common.primitives.Doubles$LexicographicalComparator[] values()
+com.google.common.primitives.Doubles$LexicographicalComparator: com.google.common.primitives.Doubles$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Floats$LexicographicalComparator: com.google.common.primitives.Floats$LexicographicalComparator[] values()
+com.google.common.primitives.Floats$LexicographicalComparator: com.google.common.primitives.Floats$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Ints$LexicographicalComparator: com.google.common.primitives.Ints$LexicographicalComparator[] values()
+com.google.common.primitives.Ints$LexicographicalComparator: com.google.common.primitives.Ints$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Longs$LexicographicalComparator: com.google.common.primitives.Longs$LexicographicalComparator[] values()
+com.google.common.primitives.Longs$LexicographicalComparator: com.google.common.primitives.Longs$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.Shorts$LexicographicalComparator: com.google.common.primitives.Shorts$LexicographicalComparator[] values()
+com.google.common.primitives.Shorts$LexicographicalComparator: com.google.common.primitives.Shorts$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.SignedBytes$LexicographicalComparator: com.google.common.primitives.SignedBytes$LexicographicalComparator[] values()
+com.google.common.primitives.SignedBytes$LexicographicalComparator: com.google.common.primitives.SignedBytes$LexicographicalComparator valueOf(java.lang.String)
+com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$PureJavaComparator: com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$PureJavaComparator[] values()
+com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$PureJavaComparator: com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$PureJavaComparator valueOf(java.lang.String)
+com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator: com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator[] values()
+com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator: com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator valueOf(java.lang.String)
+com.google.common.util.concurrent.Service$State: com.google.common.util.concurrent.Service$State[] values()
+com.google.common.util.concurrent.Service$State: com.google.common.util.concurrent.Service$State valueOf(java.lang.String)
+com.phonegap.DroidGap
+com.phonegap.StandAlone
+com.phonegap.api.PhonegapActivity
+com.phonegap.api.PluginResult$Status: com.phonegap.api.PluginResult$Status[] values()
+com.phonegap.api.PluginResult$Status: com.phonegap.api.PluginResult$Status valueOf(java.lang.String)
+com.salesforce.androidsdk.app.ForceApp
+com.salesforce.androidsdk.app.ForceApp: ForceApp()
+com.salesforce.androidsdk.auth.AuthenticatorService
+com.salesforce.androidsdk.auth.AuthenticatorService: AuthenticatorService()
+com.salesforce.androidsdk.auth.HttpAccess
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action: com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action[] values()
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action: com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action valueOf(java.lang.String)
+com.salesforce.androidsdk.phonegap.SmartStorePlugin$Action: com.salesforce.androidsdk.phonegap.SmartStorePlugin$Action[] values()
+com.salesforce.androidsdk.phonegap.SmartStorePlugin$Action: com.salesforce.androidsdk.phonegap.SmartStorePlugin$Action valueOf(java.lang.String)
+com.salesforce.androidsdk.phonegap.TestRunnerPlugin$Action: com.salesforce.androidsdk.phonegap.TestRunnerPlugin$Action[] values()
+com.salesforce.androidsdk.phonegap.TestRunnerPlugin$Action: com.salesforce.androidsdk.phonegap.TestRunnerPlugin$Action valueOf(java.lang.String)
+com.salesforce.androidsdk.rest.RestRequest$RestAction: com.salesforce.androidsdk.rest.RestRequest$RestAction[] values()
+com.salesforce.androidsdk.rest.RestRequest$RestAction: com.salesforce.androidsdk.rest.RestRequest$RestAction valueOf(java.lang.String)
+com.salesforce.androidsdk.rest.RestRequest$RestMethod: com.salesforce.androidsdk.rest.RestRequest$RestMethod[] values()
+com.salesforce.androidsdk.rest.RestRequest$RestMethod: com.salesforce.androidsdk.rest.RestRequest$RestMethod valueOf(java.lang.String)
+com.salesforce.androidsdk.store.DBHelper: com.salesforce.androidsdk.store.DBHelper[] values()
+com.salesforce.androidsdk.store.DBHelper: com.salesforce.androidsdk.store.DBHelper valueOf(java.lang.String)
+com.salesforce.androidsdk.store.SmartStore$Order: com.salesforce.androidsdk.store.SmartStore$Order[] values()
+com.salesforce.androidsdk.store.SmartStore$Order: com.salesforce.androidsdk.store.SmartStore$Order valueOf(java.lang.String)
+com.salesforce.androidsdk.store.SmartStore$QueryType: com.salesforce.androidsdk.store.SmartStore$QueryType[] values()
+com.salesforce.androidsdk.store.SmartStore$QueryType: com.salesforce.androidsdk.store.SmartStore$QueryType valueOf(java.lang.String)
+com.salesforce.androidsdk.store.SmartStore$Type: com.salesforce.androidsdk.store.SmartStore$Type[] values()
+com.salesforce.androidsdk.store.SmartStore$Type: com.salesforce.androidsdk.store.SmartStore$Type valueOf(java.lang.String)
+com.salesforce.androidsdk.ui.LoginActivity
+com.salesforce.androidsdk.ui.LoginActivity: LoginActivity()
+com.salesforce.androidsdk.ui.LoginActivity: void onClearCookiesClick(android.view.View)
+com.salesforce.androidsdk.ui.LoginActivity: void onReloadClick(android.view.View)
+com.salesforce.androidsdk.ui.LoginActivity: void onPickServerClick(android.view.View)
+com.salesforce.androidsdk.ui.PasscodeActivity
+com.salesforce.androidsdk.ui.PasscodeActivity: PasscodeActivity()
+com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode: com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode[] values()
+com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode: com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode valueOf(java.lang.String)
+com.salesforce.androidsdk.ui.SalesforceDroidGapActivity
+com.salesforce.androidsdk.ui.ServerPickerActivity
+com.salesforce.androidsdk.ui.ServerPickerActivity: ServerPickerActivity()
+com.salesforce.androidsdk.ui.ServerPickerActivity: void onClick(android.view.View)
+com.salesforce.androidsdk.ui.ServerPickerActivity: void onResetClick(android.view.View)
+com.salesforce.androidsdk.ui.ServerPickerActivity: void setCancelReturnValue(android.view.View)
+com.salesforce.androidsdk.ui.ServerPickerActivity: void setPositiveReturnValue(android.view.View)
+com.salesforce.androidsdk.ui.ServerPickerActivity: void showCustomUrlDialog(android.view.View)
+com.salesforce.androidsdk.util.EventsObservable$EventType: com.salesforce.androidsdk.util.EventsObservable$EventType[] values()
+com.salesforce.androidsdk.util.EventsObservable$EventType: com.salesforce.androidsdk.util.EventsObservable$EventType valueOf(java.lang.String)
+example.SQLDemoActivity
+info.guardianproject.database.CursorWindow
+info.guardianproject.database.CursorWindow: android.os.Parcelable$Creator CREATOR
+info.guardianproject.database.CursorWindow: int getNumRows_native()
+info.guardianproject.database.CursorWindow: boolean setNumColumns_native(int)
+info.guardianproject.database.CursorWindow: boolean allocRow_native()
+info.guardianproject.database.CursorWindow: void freeLastRow_native()
+info.guardianproject.database.CursorWindow: boolean putBlob_native(byte[],int,int)
+info.guardianproject.database.CursorWindow: boolean putString_native(java.lang.String,int,int)
+info.guardianproject.database.CursorWindow: boolean putLong_native(long,int,int)
+info.guardianproject.database.CursorWindow: boolean putDouble_native(double,int,int)
+info.guardianproject.database.CursorWindow: boolean putNull_native(int,int)
+info.guardianproject.database.CursorWindow: boolean isNull_native(int,int)
+info.guardianproject.database.CursorWindow: byte[] getBlob_native(int,int)
+info.guardianproject.database.CursorWindow: boolean isBlob_native(int,int)
+info.guardianproject.database.CursorWindow: boolean isString_native(int,int)
+info.guardianproject.database.CursorWindow: boolean isInteger_native(int,int)
+info.guardianproject.database.CursorWindow: boolean isFloat_native(int,int)
+info.guardianproject.database.CursorWindow: java.lang.String getString_native(int,int)
+info.guardianproject.database.CursorWindow: char[] copyStringToBuffer_native(int,int,int,android.database.CharArrayBuffer)
+info.guardianproject.database.CursorWindow: long getLong_native(int,int)
+info.guardianproject.database.CursorWindow: double getDouble_native(int,int)
+info.guardianproject.database.CursorWindow: void native_clear()
+info.guardianproject.database.CursorWindow: void close_native()
+info.guardianproject.database.CursorWindow: android.os.IBinder native_getBinder()
+info.guardianproject.database.CursorWindow: void native_init(boolean)
+info.guardianproject.database.CursorWindow: void native_init(android.os.IBinder)
+info.guardianproject.database.sqlcipher.SQLiteCompiledSql
+info.guardianproject.database.sqlcipher.SQLiteCompiledSql: void native_compile(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteCompiledSql: void native_finalize()
+info.guardianproject.database.sqlcipher.SQLiteDatabase
+info.guardianproject.database.sqlcipher.SQLiteDatabase: int releaseMemory()
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void dbclose()
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void setICURoot(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void dbopen(java.lang.String,int)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void enableSqlTracing(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void enableSqlProfiling(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void native_execSQL(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: void native_setLocale(java.lang.String,int)
+info.guardianproject.database.sqlcipher.SQLiteDatabase: long lastInsertRow()
+info.guardianproject.database.sqlcipher.SQLiteDatabase: int lastChangeCount()
+info.guardianproject.database.sqlcipher.SQLiteDatabase: int native_getDbLookaside()
+info.guardianproject.database.sqlcipher.SQLiteDebug
+info.guardianproject.database.sqlcipher.SQLiteDebug: void getPagerStats(info.guardianproject.database.sqlcipher.SQLiteDebug$PagerStats)
+info.guardianproject.database.sqlcipher.SQLiteDebug: long getHeapSize()
+info.guardianproject.database.sqlcipher.SQLiteDebug: long getHeapAllocatedSize()
+info.guardianproject.database.sqlcipher.SQLiteDebug: long getHeapFreeSize()
+info.guardianproject.database.sqlcipher.SQLiteDebug: void getHeapDirtyPages(int[])
+info.guardianproject.database.sqlcipher.SQLiteProgram
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_compile(java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_finalize()
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_bind_null(int)
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_bind_long(int,long)
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_bind_double(int,double)
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_bind_string(int,java.lang.String)
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_bind_blob(int,byte[])
+info.guardianproject.database.sqlcipher.SQLiteProgram: void native_clear_bindings()
+info.guardianproject.database.sqlcipher.SQLiteQuery
+info.guardianproject.database.sqlcipher.SQLiteQuery: int native_fill_window(info.guardianproject.database.CursorWindow,int,int,int,int)
+info.guardianproject.database.sqlcipher.SQLiteQuery: int native_column_count()
+info.guardianproject.database.sqlcipher.SQLiteQuery: java.lang.String native_column_name(int)
+info.guardianproject.database.sqlcipher.SQLiteStatement
+info.guardianproject.database.sqlcipher.SQLiteStatement: void native_execute()
+info.guardianproject.database.sqlcipher.SQLiteStatement: long native_1x1_long()
+info.guardianproject.database.sqlcipher.SQLiteStatement: java.lang.String native_1x1_string()
+javax.annotation.meta.When: javax.annotation.meta.When[] values()
+javax.annotation.meta.When: javax.annotation.meta.When valueOf(java.lang.String)

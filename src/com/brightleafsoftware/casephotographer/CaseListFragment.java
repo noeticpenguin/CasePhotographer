@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.flurry.android.FlurryAgent;
 import com.salesforce.androidsdk.app.ForceApp;
 import com.salesforce.androidsdk.rest.ClientManager;
 import com.salesforce.androidsdk.rest.RestClient;
@@ -64,6 +65,18 @@ public class CaseListFragment extends ListFragment {
 		passcodeManager = ForceApp.APP.getPasscodeManager();
 	}
 
+	public void onStart() {
+		FlurryAgent.setUseHttps(true);
+		FlurryAgent.onStartSession(getActivity(), CasePhotographer.FLURRYAPIKEY);
+		FlurryAgent.logEvent("Starting Case List Fragment");
+		super.onStart();
+	}
+	
+	public void onStop() {
+		FlurryAgent.onEndSession(getActivity());
+		super.onStop();
+	}
+	
 	@Override
 	public void onResume() {
 		super.onResume();

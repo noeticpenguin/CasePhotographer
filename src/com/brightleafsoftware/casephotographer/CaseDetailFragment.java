@@ -1,5 +1,6 @@
 package com.brightleafsoftware.casephotographer;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -7,7 +8,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.ParseException;
@@ -16,22 +19,33 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.salesforce.androidsdk.app.ForceApp;
+import com.salesforce.androidsdk.rest.ClientManager;
 import com.salesforce.androidsdk.rest.RestClient;
 import com.salesforce.androidsdk.rest.RestRequest;
 import com.salesforce.androidsdk.rest.RestResponse;
+import com.salesforce.androidsdk.rest.ClientManager.LoginOptions;
+import com.salesforce.androidsdk.rest.ClientManager.RestClientCallback;
 import com.salesforce.androidsdk.security.PasscodeManager;
 
 import com.brightleafsoftware.casephotographer.HorizontalListView;
+import com.flurry.android.FlurryAgent;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -46,6 +60,7 @@ public class CaseDetailFragment extends Fragment {
 	public static final String TAG = "CasePhotographer/CaseDetailFragment";
 	private String mItem;
 	private PasscodeManager passcodeManager;
+	@SuppressWarnings("unused")
 	private RestClient rc;
 	private JSONArray caseRecord;
 	private AsyncTask<RestRequest, Integer, JSONArray> caseDetailsAFR;
@@ -54,6 +69,10 @@ public class CaseDetailFragment extends Fragment {
 	private SFImageAdapter adapter;
 	private ArrayList<String> images;
 	private View rootView;
+	private Uri fileUri = Uri.EMPTY;
+	private String caseId = "";
+	private String attachmentId = "";
+	private static final int GETIMAGE = 1;
 
 	public CaseDetailFragment() {
 	}
@@ -61,6 +80,7 @@ public class CaseDetailFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setHasOptionsMenu(true);
 		if (getArguments().containsKey(ARG_ITEM_ID)) {
 			mItem = getArguments().getString(ARG_ITEM_ID);
 		}
@@ -71,6 +91,148 @@ public class CaseDetailFragment extends Fragment {
 
 		// Passcode manager
 		passcodeManager = ForceApp.APP.getPasscodeManager();
+
+		setCaseId(getArguments().getString(ARG_ITEM_ID));
+	}
+
+	public void onStart() {
+		FlurryAgent.setUseHttps(true);
+		FlurryAgent.onStartSession(getActivity(), CasePhotographer.FLURRYAPIKEY);
+		FlurryAgent.onPageView();
+		FlurryAgent.logEvent("Starting Case Detail Fragment");
+		super.onStart();
+	}
+	
+	public void onStop() {
+		FlurryAgent.onEndSession(getActivity());
+		super.onStart();
+	}
+	
+	public void onCreateOptionsMenu(Menu menu, MenuInflater mi) {
+		mi.inflate(R.menu.newpic, menu);
+	}
+
+	private File createTemporaryFile(String part, String ext) throws Exception {
+		File tempDir = Environment
+				.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+		if (!tempDir.exists()) {
+			tempDir.mkdir();
+		}
+		return File.createTempFile(part, ext, tempDir);
+	}
+
+	private byte[] readBitmapAsByteArray(String path) {
+		BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inPurgeable = true;
+		options.inInputShareable = true;
+		options.inTempStorage = new byte[32 * 1024];
+		Bitmap bm = BitmapFactory.decodeFile(path, options);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		bm = Bitmap.createScaledBitmap(bm, 1024, 768, true);
+		bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+		byte[] b = baos.toByteArray();
+		return b;
+	}
+
+	public void fireTakePictureIntent() {
+		FlurryAgent.logEvent("Firing Action Image Capture Intent");
+		File photo = null;
+		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+		try {
+			photo = createTemporaryFile("CasePhotographer", ".jpg");
+			photo.delete();
+		} catch (Exception e) {
+			Log.e(TAG, "Can't create file to take picture!", e);
+		}
+		setFileUri(Uri.fromFile(photo));
+		takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, getFileUri());
+		// start camera intent
+		startActivityForResult(takePictureIntent, GETIMAGE);
+	}
+
+	private void moveImageToCacheDir() {
+		File cacheDir = CasePhotographer.getContext().getExternalCacheDir();
+		File oldName = new File(getFileUri().getPath());
+		File newName = new File(cacheDir + "/" + getAttachmentId() + ".jpg");
+		oldName.renameTo(newName);
+		setFileUri(Uri.fromFile(newName));
+		// Log.i(TAG, "Moved " + oldName.getPath() + " to " +
+		// newName.getPath());
+	}
+
+	// called after camera intent finished
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+		if (requestCode == GETIMAGE && resultCode == Activity.RESULT_OK) {
+
+			// upload the image to SF
+			// Log.i(TAG, fileUri.getPath());
+			byte[] filebytes = null;
+
+			filebytes = readBitmapAsByteArray(getFileUri().getPath());
+			String objectType = "Attachment";
+			Map<String, Object> fields = new HashMap<String, Object>();
+			fields.put("Name", getFileUri().getLastPathSegment());
+			fields.put("ContentType", "image/jpeg");
+			fields.put("ParentId", getCaseId());
+			fields.put("Body", Base64.encodeToString(filebytes, Base64.DEFAULT));
+
+			try {
+				FlurryAgent.logEvent("Uploading image to SF");
+				RestRequest request = RestRequest.getRequestForCreate(
+						CasePhotographer.APIVERSION, objectType, fields);
+				new AsyncUploadImageForceRequest().execute(request);
+			} catch (Exception e) {
+				Log.e(TAG, "Failed to Upload! Image", e);
+			}
+
+		}
+		super.onActivityResult(requestCode, resultCode, intent);
+	}
+
+	private class AsyncUploadImageForceRequest extends
+			AsyncTask<RestRequest, Integer, Integer> {
+		ProgressDialog pd = new ProgressDialog(getActivity());
+		RestResponse response = null;
+
+		@Override
+		protected void onPreExecute() {
+			pd.setMessage("Attaching Image to Case: " + getCaseId());
+			pd.setIndeterminate(true);
+			pd.show();
+		}
+
+		@Override
+		protected Integer doInBackground(RestRequest... params) {
+			try {
+				response = CasePhotographer.rc.sendSync(params[0]);
+				setAttachmentId(response.asJSONObject().getString("id"));
+				Log.d(TAG, getAttachmentId());
+			} catch (IOException e) {
+				Log.e(TAG, "Failed to attach image to case", e);
+			} catch (ParseException e) {
+				Log.e(TAG, "Failed to parse results of upload", e);
+			} catch (JSONException e) {
+				Log.e(TAG, "A JSON Exception occured", e);
+			}
+
+			return response.getStatusCode();
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... progress) {
+
+		}
+
+		@Override
+		protected void onPostExecute(Integer statusCode) {
+			moveImageToCacheDir();
+			pd.dismiss();
+			refreshImages();
+		}
+
 	}
 
 	@Override
@@ -110,10 +272,12 @@ public class CaseDetailFragment extends Fragment {
 
 		// Bring up passcode screen if needed
 		if (passcodeManager.onResume(getActivity())) {
-			this.rc = CasePhotographer.rc;
 		}
 
 		// Setup the ui.
+		if (rootView != null) {
+			rootView.invalidate();
+		}
 		rootView = inflater.inflate(R.layout.fragment_case_detail, container,
 				false);
 
@@ -269,13 +433,38 @@ public class CaseDetailFragment extends Fragment {
 
 	@Override
 	public void onResume() {
+		if (passcodeManager.onResume(getActivity())) {
+
+			// Login options
+			String accountType = ForceApp.APP.getAccountType();
+			LoginOptions loginOptions = new LoginOptions(
+					null, // login host is chosen by user through the server
+							// picker
+					ForceApp.APP.getPasscodeHash(),
+					getString(R.string.oauth_callback_url),
+					getString(R.string.oauth_client_id), new String[] { "api" });
+
+			new ClientManager(getActivity(), accountType, loginOptions)
+					.getRestClient(getActivity(), new RestClientCallback() {
+						@Override
+						public void authenticatedRestClient(RestClient client) {
+							if (client == null) {
+								ForceApp.APP.logout(getActivity());
+								return;
+							}
+
+							CaseDetailFragment.this.rc = client;
+							CasePhotographer.setRc(client);
+						}
+					});
+		}
 		super.onResume();
 	}
 
 	public void refreshImages() {
 		adapter.notifyDataSetInvalidated();
 		getDataForFragmentView();
-		if(images.size() > 0 ) {
+		if (images.size() > 0) {
 			adapter.setImages(images);
 			HorizontalListView caseImages = (HorizontalListView) rootView
 					.findViewById(R.id.HLV);
@@ -286,6 +475,30 @@ public class CaseDetailFragment extends Fragment {
 			tv.setVisibility(View.GONE);
 		}
 		rootView.invalidate();
+	}
+
+	public Uri getFileUri() {
+		return fileUri;
+	}
+
+	public void setFileUri(Uri fileUri) {
+		this.fileUri = fileUri;
+	}
+
+	public String getCaseId() {
+		return caseId;
+	}
+
+	public void setCaseId(String caseId) {
+		this.caseId = caseId;
+	}
+
+	public String getAttachmentId() {
+		return attachmentId;
+	}
+
+	public void setAttachmentId(String attachmentId) {
+		this.attachmentId = attachmentId;
 	}
 
 	private class AsyncForceRequest extends
@@ -303,7 +516,7 @@ public class CaseDetailFragment extends Fragment {
 		protected JSONArray doInBackground(RestRequest... params) {
 			RestResponse response = null;
 			try {
-				response = CaseDetailFragment.this.rc.sendSync(params[0]);
+				response = CasePhotographer.rc.sendSync(params[0]);
 			} catch (IOException e) {
 				Log.e(TAG, "IO Exception while making rest request", e);
 			}
