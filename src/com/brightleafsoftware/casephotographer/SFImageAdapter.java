@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 
 public class SFImageAdapter extends BaseAdapter {
@@ -18,8 +19,8 @@ public class SFImageAdapter extends BaseAdapter {
 	private ArrayList<String> images;
 	private Context ctx;
 	private final static String TAG = "CasePhotographer/JSONCaseAdapter";
-	private static final int THUMBNAIL_SIZE = 512; // 384;
-	private static int ZOOM_SIZE = CaseDetailActivity.getZoomSize();
+	private static final int THUMBNAIL_SIZE = 220; // 165;
+	private static int ZOOM_SIZE = U.getZoomSize();
 	
 	public SFImageAdapter(Context ctx, ArrayList<String> images) {
 		this.images = images;
@@ -79,6 +80,8 @@ public class SFImageAdapter extends BaseAdapter {
 		}
 
 		((ImageView) v).setImageBitmap(getThumb(images.get(position),THUMBNAIL_SIZE));
+		LayoutParams params = new LayoutParams(220, 165);
+		v.setLayoutParams(params);
 		v.setOnLongClickListener(new zoomClickListener(position));
 		return v;
 	}

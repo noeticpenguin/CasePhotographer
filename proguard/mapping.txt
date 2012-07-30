@@ -1,0 +1,2556 @@
+android.support.v4.app.BackStackRecord -> android.support.v4.app.a:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add$324a6018(android.support.v4.app.Fragment,java.lang.String) -> a
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    void run() -> run
+    void popFromBackStack$1385ff() -> b
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.b:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.c:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> N
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    int mFragmentId -> u
+    int mContainerId -> v
+    java.lang.String mTag -> w
+    boolean mHidden -> x
+    boolean mDetached -> y
+    boolean mRetainInstance -> z
+    boolean mRetaining -> A
+    boolean mHasMenu -> B
+    boolean mMenuVisible -> C
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> L
+    boolean mCheckedForLoaderManager -> M
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState() -> a
+    void setIndex(int) -> a
+    boolean isInBackStack() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    void setArguments(android.os.Bundle) -> a
+    android.os.Bundle getArguments() -> c
+    android.support.v4.app.FragmentActivity getActivity() -> d
+    android.content.res.Resources getResources() -> e
+    java.lang.String getString(int) -> b
+    void onHiddenChanged$1385ff() -> f
+    void setHasOptionsMenu$1385ff() -> g
+    void startActivityForResult$7a9ca511(android.content.Intent) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater$2ee30c11() -> h
+    void onInflate$423a76cd() -> i
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation$24236ca7() -> j
+    void onCreate(android.os.Bundle) -> b
+    android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated$79e5e33f() -> k
+    void onResume() -> l
+    void onSaveInstanceState(android.os.Bundle) -> c
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> m
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> n
+    void onDestroy() -> o
+    void initState() -> p
+    void onDetach() -> q
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu$1eec55bd() -> r
+    void onDestroyOptionsMenu() -> s
+    boolean onOptionsItemSelected$1b88ab4c() -> t
+    void onOptionsMenuClosed$1eec55bd() -> u
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected$1b88ab4c() -> v
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
+    void performStart() -> w
+    void performStop() -> x
+    void performReallyStop() -> y
+    void performDestroyView() -> z
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.d:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.e:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivity:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    boolean mCreated -> c
+    boolean mResumed -> d
+    boolean mStopped -> e
+    boolean mReallyStopped -> f
+    boolean mRetaining -> g
+    boolean mOptionsMenuInvalidated -> h
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    android.support.v4.util.SparseArrayCompat mAllLoaderManagers -> k
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    void supportInvalidateOptionsMenu() -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    void doReallyStop(boolean) -> a
+    void onAttachFragment$65850823() -> c
+    android.support.v4.app.FragmentManager getSupportFragmentManager() -> d
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void startActivityFromFragment$68747257(android.support.v4.app.Fragment,android.content.Intent) -> a
+    void invalidateSupportFragmentIndex(int) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager$3d2266e4(int) -> b
+android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.f:
+    android.support.v4.app.FragmentActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.g:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.h:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    android.support.v4.util.SparseArrayCompat loaders -> e
+android.support.v4.app.FragmentManager -> android.support.v4.app.i:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.j:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    boolean mNeedMenuInvalidate -> p
+    boolean mStateSaved -> q
+    boolean mDestroyed -> r
+    java.lang.String mNoTransactionsBecause -> s
+    boolean mHavePendingDeferredStart -> t
+    android.os.Bundle mStateBundle -> u
+    android.util.SparseArray mStateArray -> v
+    java.lang.Runnable mExecCommit -> w
+    android.view.animation.Interpolator DECELERATE_QUINT -> x
+    android.view.animation.Interpolator DECELERATE_CUBIC -> y
+    android.view.animation.Interpolator ACCELERATE_QUINT -> z
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> A
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean popBackStackImmediate() -> b
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump$ec96877(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter) -> a
+    android.view.animation.Animation makeOpenCloseAnimation$376f30fd(float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation$424ea1bd(float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> a
+    void moveToState$2563266(int) -> d
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> t
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> u
+    void enqueueAction$574583f(java.lang.Runnable) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> c
+    void reportBackStackChanged() -> v
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    java.util.ArrayList retainNonConfig() -> d
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> b
+    android.os.Parcelable saveAllState() -> e
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity) -> a
+    void noteStateNotSaved() -> f
+    void dispatchCreate() -> g
+    void dispatchActivityCreated() -> h
+    void dispatchStart() -> i
+    void dispatchResume() -> j
+    void dispatchPause() -> k
+    void dispatchStop() -> l
+    void dispatchReallyStop() -> m
+    void dispatchDestroy() -> n
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> o
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu$1eec55b9() -> p
+    boolean dispatchOptionsItemSelected$1b88ab4c() -> q
+    boolean dispatchContextItemSelected$1b88ab4c() -> r
+    void dispatchOptionsMenuClosed$1eec55bd() -> s
+    int reverseTransit(int) -> c
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.k:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.l:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.m:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.n:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.o:
+    android.support.v4.app.FragmentTransaction add$324a6018(android.support.v4.app.Fragment,java.lang.String) -> a
+    int commit() -> a
+android.support.v4.app.ListFragment -> android.support.v4.app.p:
+    android.os.Handler mHandler -> V
+    java.lang.Runnable mRequestFocus -> W
+    android.widget.AdapterView$OnItemClickListener mOnClickListener -> X
+    android.widget.ListAdapter mAdapter -> N
+    android.widget.ListView mList -> O
+    android.view.View mEmptyView -> P
+    android.widget.TextView mStandardEmptyView -> Q
+    android.view.View mProgressContainer -> R
+    android.view.View mListContainer -> S
+    java.lang.CharSequence mEmptyText -> T
+    boolean mListShown -> U
+    android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onDestroyView() -> n
+    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> a
+    void setListAdapter(android.widget.ListAdapter) -> a
+    android.widget.ListView getListView() -> A
+    void setListShown(boolean,boolean) -> a
+    void ensureList() -> B
+android.support.v4.app.ListFragment$1 -> android.support.v4.app.q:
+    android.support.v4.app.ListFragment this$0 -> a
+    void run() -> run
+android.support.v4.app.ListFragment$2 -> android.support.v4.app.r:
+    android.support.v4.app.ListFragment this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+android.support.v4.app.LoaderManager -> android.support.v4.app.s:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.t:
+    android.support.v4.content.Loader onCreateLoader$e57f803() -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.u:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    android.support.v4.app.FragmentActivity mActivity -> d
+    boolean mStarted -> e
+    boolean mRetaining -> f
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.v:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void stop() -> a
+    void destroy() -> b
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
+android.support.v4.app.NavUtils -> android.support.v4.app.w:
+    android.support.v4.app.NavUtils$NavUtilsImpl IMPL -> a
+    void navigateUpTo(android.app.Activity,android.content.Intent) -> a
+android.support.v4.app.NavUtils$NavUtilsImpl -> android.support.v4.app.x:
+    void navigateUpTo(android.app.Activity,android.content.Intent) -> a
+android.support.v4.app.NavUtils$NavUtilsImplBase -> android.support.v4.app.y:
+    void navigateUpTo(android.app.Activity,android.content.Intent) -> a
+android.support.v4.app.NavUtils$NavUtilsImplJB -> android.support.v4.app.z:
+    void navigateUpTo(android.app.Activity,android.content.Intent) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void stopLoading() -> b
+    void reset() -> c
+    java.lang.String toString() -> toString
+    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.b:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.c:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    java.lang.Object get(int) -> a
+    void remove(int) -> b
+    void removeAt(int) -> c
+    void gc() -> c
+    int size() -> a
+    int keyAt(int) -> d
+    java.lang.Object valueAt(int) -> e
+    void clear() -> b
+    int binarySearch$76412d8d(int[],int,int) -> a
+android.support.v4.view.AccessibilityDelegateCompat -> android.support.v4.view.a:
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl IMPL -> b
+    java.lang.Object DEFAULT_DELEGATE -> c
+    java.lang.Object mBridge -> a
+    java.lang.Object getBridge() -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl -> android.support.v4.view.b:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1 -> android.support.v4.view.c:
+    android.support.v4.view.AccessibilityDelegateCompat val$compat -> a
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl this$0 -> b
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl -> android.support.v4.view.d:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl -> android.support.v4.view.e:
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl$1 -> android.support.v4.view.f:
+    android.support.v4.view.AccessibilityDelegateCompat val$compat -> a
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl this$0 -> b
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    java.lang.Object getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl -> android.support.v4.view.g:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompatIcs -> android.support.v4.view.h:
+android.support.v4.view.AccessibilityDelegateCompatIcs$1 -> android.support.v4.view.i:
+    android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge val$bridge -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onInitializeAccessibilityEvent
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.view.accessibility.AccessibilityNodeInfo) -> onInitializeAccessibilityNodeInfo
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onPopulateAccessibilityEvent
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> onRequestSendAccessibilityEvent
+    void sendAccessibilityEvent(android.view.View,int) -> sendAccessibilityEvent
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> sendAccessibilityEventUnchecked
+android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge -> android.support.v4.view.j:
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompatJellyBean -> android.support.v4.view.k:
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$1 -> android.support.v4.view.l:
+    android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean val$bridge -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onInitializeAccessibilityEvent
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.view.accessibility.AccessibilityNodeInfo) -> onInitializeAccessibilityNodeInfo
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onPopulateAccessibilityEvent
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> onRequestSendAccessibilityEvent
+    void sendAccessibilityEvent(android.view.View,int) -> sendAccessibilityEvent
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> sendAccessibilityEventUnchecked
+    android.view.accessibility.AccessibilityNodeProvider getAccessibilityNodeProvider(android.view.View) -> getAccessibilityNodeProvider
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> performAccessibilityAction
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean -> android.support.v4.view.m:
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    java.lang.Object getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.n:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers$79c6ddc0(android.view.KeyEvent) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> b
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.o:
+    int metaStateFilterDirectionalModifiers$2e71581f(int,int,int,int) -> a
+    int normalizeMetaState(int) -> c
+    boolean metaStateHasModifiers$255f299(int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.p:
+    boolean metaStateHasModifiers$255f299(int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.q:
+    boolean metaStateHasModifiers$255f299(int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.r:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.s:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.t:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.u:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> android.support.v4.view.v:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void destroyItem$30510aeb() -> b
+    boolean isViewFromObject$171eb1dd() -> c
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+android.support.v4.view.PagerTabStrip -> android.support.v4.view.PagerTabStrip:
+    int mIndicatorColor -> f
+    int mIndicatorHeight -> g
+    int mMinPaddingBottom -> h
+    int mMinTextSpacing -> i
+    int mMinStripHeight -> j
+    int mTabPadding -> k
+    android.graphics.Paint mTabPaint -> l
+    android.graphics.Rect mTempRect -> m
+    int mTabAlpha -> n
+    boolean mDrawFullUnderline -> o
+    boolean mDrawFullUnderlineSet -> p
+    int mFullUnderlineHeight -> q
+    boolean mIgnoreTap -> r
+    float mInitialMotionX -> s
+    float mInitialMotionY -> t
+    int mTouchSlop -> u
+    void setPadding(int,int,int,int) -> setPadding
+    void setTextSpacing(int) -> a
+    void setBackgroundDrawable(android.graphics.drawable.Drawable) -> setBackgroundDrawable
+    void setBackgroundColor(int) -> setBackgroundColor
+    void setBackgroundResource(int) -> setBackgroundResource
+    int getMinHeight() -> a
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void updateTextPositions(int,float,boolean) -> a
+android.support.v4.view.PagerTabStrip$1 -> android.support.v4.view.w:
+    android.support.v4.view.PagerTabStrip this$0 -> a
+    void onClick(android.view.View) -> onClick
+android.support.v4.view.PagerTabStrip$2 -> android.support.v4.view.x:
+    android.support.v4.view.PagerTabStrip this$0 -> a
+    void onClick(android.view.View) -> onClick
+android.support.v4.view.PagerTitleStrip -> android.support.v4.view.PagerTitleStrip:
+    android.support.v4.view.ViewPager mPager -> a
+    android.widget.TextView mPrevText -> b
+    android.widget.TextView mCurrText -> c
+    android.widget.TextView mNextText -> d
+    int mLastKnownCurrentPage -> f
+    float mLastKnownPositionOffset -> g
+    int mScaledTextSpacing -> h
+    int mGravity -> i
+    boolean mUpdatingText -> j
+    boolean mUpdatingPositions -> k
+    android.support.v4.view.PagerTitleStrip$PageListener mPageListener -> l
+    int[] ATTRS -> m
+    int[] TEXT_ATTRS -> n
+    int mNonPrimaryAlpha -> o
+    int mTextColor -> e
+    android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl IMPL -> p
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+    void setTextSpacing(int) -> a
+    int getTextSpacing() -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void updateText$7a69ae8(int) -> b
+    void requestLayout() -> requestLayout
+    void updateAdapter(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+    void updateTextPositions(int,float,boolean) -> a
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    int getMinHeight() -> a
+android.support.v4.view.PagerTitleStrip$PageListener -> android.support.v4.view.y:
+    int mScrollState -> b
+    android.support.v4.view.PagerTitleStrip this$0 -> a
+    void onPageScrolled$486775f1(int,float) -> a
+    void onPageSelected$13462e() -> a
+    void onPageScrollStateChanged(int) -> a
+    void onChanged() -> onChanged
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl -> android.support.v4.view.z:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplBase -> android.support.v4.view.aa:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplIcs -> android.support.v4.view.ab:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStripIcs -> android.support.v4.view.ac:
+android.support.v4.view.PagerTitleStripIcs$SingleLineAllCapsTransform -> android.support.v4.view.ad:
+    java.util.Locale mLocale -> a
+    java.lang.CharSequence getTransformation(java.lang.CharSequence,android.view.View) -> getTransformation
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.ae:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.af:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.ag:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.ah:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> android.support.v4.view.ai:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility$5359dc9a(android.view.View) -> d
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.aj:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    long getFrameTime() -> a
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility$5359dc9a(android.view.View) -> d
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.ak:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.al:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.am:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.an:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility$5359dc9a(android.view.View) -> d
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.ao:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility$5359dc9a(android.view.View) -> d
+android.support.v4.view.ViewConfigurationCompat -> android.support.v4.view.ap:
+    android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl IMPL -> a
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl -> android.support.v4.view.aq:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl -> android.support.v4.view.ar:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl -> android.support.v4.view.as:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    android.view.animation.Interpolator sInterpolator -> c
+    java.util.ArrayList mItems -> d
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> e
+    android.graphics.Rect mTempRect -> f
+    android.support.v4.view.PagerAdapter mAdapter -> g
+    int mCurItem -> h
+    int mRestoredCurItem -> i
+    android.os.Parcelable mRestoredAdapterState -> j
+    java.lang.ClassLoader mRestoredClassLoader -> k
+    android.widget.Scroller mScroller -> l
+    int mPageMargin -> m
+    android.graphics.drawable.Drawable mMarginDrawable -> n
+    int mTopPageBounds -> o
+    int mBottomPageBounds -> p
+    float mFirstOffset -> q
+    float mLastOffset -> r
+    int mChildWidthMeasureSpec -> s
+    int mChildHeightMeasureSpec -> t
+    boolean mInLayout -> u
+    boolean mScrollingCacheEnabled -> v
+    boolean mPopulatePending -> w
+    int mOffscreenPageLimit -> x
+    boolean mIsBeingDragged -> y
+    boolean mIsUnableToDrag -> z
+    int mDefaultGutterSize -> A
+    int mGutterSize -> B
+    int mTouchSlop -> C
+    float mInitialMotionX -> D
+    float mLastMotionX -> E
+    float mLastMotionY -> F
+    int mActivePointerId -> G
+    android.view.VelocityTracker mVelocityTracker -> H
+    int mMinimumVelocity -> I
+    int mMaximumVelocity -> J
+    int mFlingDistance -> K
+    int mCloseEnough -> L
+    boolean mFakeDragging -> M
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> N
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> O
+    boolean mFirstLayout -> P
+    boolean mNeedCalculatePageOffsets -> Q
+    boolean mCalledSuper -> R
+    int mDecorChildCount -> S
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> T
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> U
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> V
+    int mScrollState -> W
+    void setScrollState(int) -> b
+    android.support.v4.view.PagerAdapter getAdapter() -> a
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> a
+    void setCurrentItem(int) -> a
+    void setCurrentItem$2563266(int) -> c
+    int getCurrentItem() -> b
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    android.support.v4.view.ViewPager$ItemInfo addNewItem$3af7e890(int) -> d
+    void populate() -> d
+    void populate(int) -> e
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild$31e08638() -> e
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> f
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> g
+    void onPageScrolled$486775f1(int,float) -> a
+    void completeScroll() -> f
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> g
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> h
+    void setScrollingCacheEnabled(boolean) -> a
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean arrowScroll(int) -> h
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> i
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.support.v4.view.PagerAdapter access$100(android.support.v4.view.ViewPager) -> a
+    int access$200(android.support.v4.view.ViewPager) -> b
+    int[] access$300() -> c
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.at:
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.au:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.av:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.aw:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ViewPager$LayoutParams:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+android.support.v4.view.ViewPager$MyAccessibilityDelegate -> android.support.v4.view.ax:
+    android.support.v4.view.ViewPager this$0 -> b
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ay:
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.az:
+    void onPageScrolled$486775f1(int,float) -> a
+    void onPageSelected$13462e() -> a
+    void onPageScrollStateChanged(int) -> a
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.ba:
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat -> android.support.v4.view.a.a:
+    android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl IMPL -> a
+    java.lang.Object mInfo -> b
+    java.lang.Object getInfo() -> a
+    void addAction(int) -> a
+    void setScrollable(boolean) -> a
+    void setClassName(java.lang.CharSequence) -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoIcsImpl -> android.support.v4.view.a.b:
+    void addAction(java.lang.Object,int) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl -> android.support.v4.view.a.c:
+    void addAction(java.lang.Object,int) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl -> android.support.v4.view.a.d:
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl -> android.support.v4.view.a.e:
+    void addAction(java.lang.Object,int) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat -> android.support.v4.view.a.f:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl IMPL -> a
+    java.lang.Object mProvider -> b
+    java.lang.Object getProvider() -> a
+    android.support.v4.view.accessibility.AccessibilityNodeInfoCompat createAccessibilityNodeInfo$f3a5639() -> b
+    boolean performAction$5985f823() -> c
+    java.util.List findAccessibilityNodeInfosByText$2393931d() -> d
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl -> android.support.v4.view.a.g:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl -> android.support.v4.view.a.h:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl$1 -> android.support.v4.view.a.i:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat val$compat -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl this$0 -> b
+    boolean performAction$5985f823() -> a
+    java.util.List findAccessibilityNodeInfosByText$2393931d() -> b
+    java.lang.Object createAccessibilityNodeInfo$54cf32c4() -> c
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderStubImpl -> android.support.v4.view.a.j:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean -> android.support.v4.view.a.k:
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$1 -> android.support.v4.view.a.l:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge val$bridge -> a
+    android.view.accessibility.AccessibilityNodeInfo createAccessibilityNodeInfo(int) -> createAccessibilityNodeInfo
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int) -> findAccessibilityNodeInfosByText
+    boolean performAction(int,int,android.os.Bundle) -> performAction
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge -> android.support.v4.view.a.m:
+    java.lang.Object createAccessibilityNodeInfo$54cf32c4() -> c
+    boolean performAction$5985f823() -> a
+    java.util.List findAccessibilityNodeInfosByText$2393931d() -> b
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.brightleafsoftware.casephotographer.CaseDetailActivity -> com.brightleafsoftware.casephotographer.CaseDetailActivity:
+    int ninetyPWidth -> m
+    int ninetyPHeight -> n
+    com.brightleafsoftware.casephotographer.CaseDetailFragment cdf -> o
+    void onCreate(android.os.Bundle) -> onCreate
+    int getZoomSize() -> e
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+com.brightleafsoftware.casephotographer.CaseDetailActivity$1 -> com.brightleafsoftware.casephotographer.a:
+    com.brightleafsoftware.casephotographer.CaseDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.brightleafsoftware.casephotographer.CaseDetailFragment -> com.brightleafsoftware.casephotographer.b:
+    java.lang.String mItem -> N
+    com.salesforce.androidsdk.security.PasscodeManager passcodeManager -> O
+    com.salesforce.androidsdk.rest.RestClient rc -> P
+    org.json.JSONArray caseRecord -> Q
+    android.os.AsyncTask caseDetailsAFR -> R
+    android.os.AsyncTask imageDetailsAFR -> S
+    android.app.ProgressDialog wait -> T
+    com.brightleafsoftware.casephotographer.SFImageAdapter adapter -> U
+    java.util.ArrayList images -> V
+    android.view.View rootView -> W
+    android.net.Uri fileUri -> X
+    java.lang.String caseId -> Y
+    java.lang.String attachmentId -> Z
+    void onCreate(android.os.Bundle) -> b
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void fireTakePictureIntent() -> A
+    void onActivityResult(int,int,android.content.Intent) -> a
+    void onAttach(android.app.Activity) -> a
+    org.json.JSONArray parseIntoJSONArray(com.brightleafsoftware.casephotographer.CaseDetailFragment$AsyncForceRequest) -> a
+    java.util.ArrayList parseIntoArrayList(com.brightleafsoftware.casephotographer.CaseDetailFragment$AsyncBinaryForceRequest) -> a
+    android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
+    void getDataForFragmentView() -> F
+    com.salesforce.androidsdk.rest.RestRequest getCaseDetailsRequest() -> G
+    com.salesforce.androidsdk.rest.RestRequest getCaseImagesRequest() -> H
+    void onResume() -> l
+    void refreshImages() -> B
+    android.net.Uri getFileUri() -> C
+    void setFileUri(android.net.Uri) -> a
+    java.lang.String getCaseId() -> D
+    void setCaseId(java.lang.String) -> a
+    java.lang.String getAttachmentId() -> E
+    void setAttachmentId(java.lang.String) -> b
+    void access$0(com.brightleafsoftware.casephotographer.CaseDetailFragment) -> a
+    com.salesforce.androidsdk.rest.RestClient access$1(com.brightleafsoftware.casephotographer.CaseDetailFragment) -> b
+com.brightleafsoftware.casephotographer.CaseDetailFragment$AsyncBinaryForceRequest -> com.brightleafsoftware.casephotographer.c:
+    android.app.ProgressDialog pd -> a
+    java.util.ArrayList imagePaths -> b
+    com.brightleafsoftware.casephotographer.CaseDetailFragment this$0 -> c
+    void onPreExecute() -> onPreExecute
+    java.util.ArrayList doInBackground(com.salesforce.androidsdk.rest.RestRequest[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+com.brightleafsoftware.casephotographer.CaseDetailFragment$AsyncForceRequest -> com.brightleafsoftware.casephotographer.d:
+    android.app.ProgressDialog pd -> a
+    com.brightleafsoftware.casephotographer.CaseDetailFragment this$0 -> b
+    void onPreExecute() -> onPreExecute
+    org.json.JSONArray doInBackground(com.salesforce.androidsdk.rest.RestRequest[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+com.brightleafsoftware.casephotographer.CaseDetailFragment$AsyncUploadImageForceRequest -> com.brightleafsoftware.casephotographer.e:
+    android.app.ProgressDialog pd -> a
+    com.salesforce.androidsdk.rest.RestResponse response -> b
+    com.brightleafsoftware.casephotographer.CaseDetailFragment this$0 -> c
+    void onPreExecute() -> onPreExecute
+    java.lang.Integer doInBackground(com.salesforce.androidsdk.rest.RestRequest[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+com.brightleafsoftware.casephotographer.CaseListActivity -> com.brightleafsoftware.casephotographer.CaseListActivity:
+    boolean mTwoPane -> m
+    android.app.AlertDialog logoutConfirmationDialog -> n
+    android.view.ActionMode mMode -> o
+    java.lang.String soslSearchString -> p
+    com.brightleafsoftware.casephotographer.CaseDetailFragment cdf -> q
+    void onCreate(android.os.Bundle) -> onCreate
+    void onItemSelected(java.lang.String) -> a
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void access$0(com.brightleafsoftware.casephotographer.CaseListActivity,java.lang.String) -> a
+    java.lang.String access$1(com.brightleafsoftware.casephotographer.CaseListActivity) -> a
+    void access$2$71e3f955(com.brightleafsoftware.casephotographer.CaseListActivity) -> b
+com.brightleafsoftware.casephotographer.CaseListActivity$1 -> com.brightleafsoftware.casephotographer.f:
+    com.brightleafsoftware.casephotographer.CaseListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.brightleafsoftware.casephotographer.CaseListActivity$SearchActionMode -> com.brightleafsoftware.casephotographer.g:
+    android.view.LayoutInflater li -> a
+    android.view.inputmethod.InputMethodManager imm -> b
+    com.brightleafsoftware.casephotographer.CaseListActivity this$0 -> c
+    boolean onActionItemClicked(android.view.ActionMode,android.view.MenuItem) -> onActionItemClicked
+    boolean onCreateActionMode(android.view.ActionMode,android.view.Menu) -> onCreateActionMode
+    void onDestroyActionMode(android.view.ActionMode) -> onDestroyActionMode
+    boolean onPrepareActionMode(android.view.ActionMode,android.view.Menu) -> onPrepareActionMode
+com.brightleafsoftware.casephotographer.CaseListFragment -> com.brightleafsoftware.casephotographer.CaseListFragment:
+    com.brightleafsoftware.casephotographer.CaseListFragment$Callbacks mCallbacks -> W
+    int mActivatedPosition -> X
+    com.salesforce.androidsdk.security.PasscodeManager passcodeManager -> Y
+    com.salesforce.androidsdk.rest.RestClient rc -> Z
+    org.json.JSONArray records -> aa
+    android.content.Context parentContext -> ab
+    android.app.ProgressDialog pd -> V
+    com.brightleafsoftware.casephotographer.JsonCaseAdapter adapter -> ac
+    com.brightleafsoftware.casephotographer.CaseListFragment$Callbacks sDummyCallbacks -> ad
+    void onCreate(android.os.Bundle) -> b
+    void onResume() -> l
+    void startProgressDialog() -> D
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    void onDetach() -> q
+    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> a
+    void onSaveInstanceState(android.os.Bundle) -> c
+    void setActivateOnItemClick$1385ff() -> B
+    void soslSearch(java.lang.String) -> a
+    void getAllCases() -> C
+    void access$0(com.brightleafsoftware.casephotographer.CaseListFragment) -> a
+    com.salesforce.androidsdk.rest.RestClient access$1(com.brightleafsoftware.casephotographer.CaseListFragment) -> b
+    void access$2(com.brightleafsoftware.casephotographer.CaseListFragment,com.salesforce.androidsdk.rest.RestClient) -> a
+com.brightleafsoftware.casephotographer.CaseListFragment$1 -> com.brightleafsoftware.casephotographer.h:
+    void onItemSelected(java.lang.String) -> a
+com.brightleafsoftware.casephotographer.CaseListFragment$2 -> com.brightleafsoftware.casephotographer.i:
+    com.brightleafsoftware.casephotographer.CaseListFragment this$0 -> a
+    void authenticatedRestClient(com.salesforce.androidsdk.rest.RestClient) -> a
+com.brightleafsoftware.casephotographer.CaseListFragment$AsyncForceRequest -> com.brightleafsoftware.casephotographer.j:
+    com.brightleafsoftware.casephotographer.CaseListFragment this$0 -> a
+    void onPreExecute() -> onPreExecute
+    org.json.JSONArray doInBackground(com.salesforce.androidsdk.rest.RestRequest[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+com.brightleafsoftware.casephotographer.CaseListFragment$Callbacks -> com.brightleafsoftware.casephotographer.k:
+    void onItemSelected(java.lang.String) -> a
+com.brightleafsoftware.casephotographer.CasePhotographer -> com.brightleafsoftware.casephotographer.CasePhotographer:
+    com.salesforce.androidsdk.ui.SalesforceR salesforceR -> c
+    android.content.Context context -> d
+    com.salesforce.androidsdk.rest.RestClient rc -> a
+    void setRc(com.salesforce.androidsdk.rest.RestClient) -> a
+    void onCreate() -> onCreate
+    android.content.Context getContext() -> a
+    java.lang.Class getMainActivityClass() -> b
+    java.lang.String getKey(java.lang.String) -> a
+    com.salesforce.androidsdk.ui.SalesforceR getSalesforceR() -> c
+com.brightleafsoftware.casephotographer.HorizontalListView -> com.brightleafsoftware.casephotographer.HorizontalListView:
+    boolean mAlwaysOverrideTouch -> a
+    android.widget.ListAdapter mAdapter -> b
+    int mLeftViewIndex -> f
+    int mRightViewIndex -> g
+    int mCurrentX -> c
+    int mNextX -> d
+    int mMaxX -> h
+    int mDisplayOffset -> i
+    android.widget.Scroller mScroller -> e
+    android.view.GestureDetector mGesture -> j
+    java.util.Queue mRemovedViewQueue -> k
+    android.widget.AdapterView$OnItemSelectedListener mOnItemSelected -> l
+    android.widget.AdapterView$OnItemClickListener mOnItemClicked -> m
+    android.widget.AdapterView$OnItemLongClickListener mOnItemLongClicked -> n
+    boolean mDataChanged -> o
+    android.database.DataSetObserver mDataObserver -> p
+    android.view.GestureDetector$OnGestureListener mOnGesture -> q
+    void initView() -> b
+    void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener) -> setOnItemSelectedListener
+    void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener) -> setOnItemClickListener
+    void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener) -> setOnItemLongClickListener
+    android.view.View getSelectedView() -> getSelectedView
+    void setAdapter(android.widget.ListAdapter) -> a
+    void reset() -> c
+    void setSelection(int) -> setSelection
+    void addAndMeasureChild(android.view.View,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
+    boolean onFling$503634dd(float) -> a
+    boolean onDown$53fcfd4e() -> a
+    void setAdapter(android.widget.Adapter) -> setAdapter
+    android.widget.Adapter getAdapter() -> getAdapter
+    void access$2$2e1bd9b5(com.brightleafsoftware.casephotographer.HorizontalListView) -> a
+    void access$3(com.brightleafsoftware.casephotographer.HorizontalListView) -> b
+    android.widget.AdapterView$OnItemClickListener access$4(com.brightleafsoftware.casephotographer.HorizontalListView) -> c
+    int access$5(com.brightleafsoftware.casephotographer.HorizontalListView) -> d
+    android.widget.AdapterView$OnItemSelectedListener access$6(com.brightleafsoftware.casephotographer.HorizontalListView) -> e
+    android.widget.AdapterView$OnItemLongClickListener access$7(com.brightleafsoftware.casephotographer.HorizontalListView) -> f
+com.brightleafsoftware.casephotographer.HorizontalListView$1 -> com.brightleafsoftware.casephotographer.l:
+    com.brightleafsoftware.casephotographer.HorizontalListView this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+com.brightleafsoftware.casephotographer.HorizontalListView$2 -> com.brightleafsoftware.casephotographer.m:
+    com.brightleafsoftware.casephotographer.HorizontalListView this$0 -> a
+    boolean onDown(android.view.MotionEvent) -> onDown
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean isEventWithinView(android.view.MotionEvent,android.view.View) -> a
+com.brightleafsoftware.casephotographer.HorizontalListView$3 -> com.brightleafsoftware.casephotographer.n:
+    com.brightleafsoftware.casephotographer.HorizontalListView this$0 -> a
+    void run() -> run
+com.brightleafsoftware.casephotographer.JsonCaseAdapter -> com.brightleafsoftware.casephotographer.o:
+    org.json.JSONArray items -> a
+    android.content.Context ctx -> b
+    android.view.LayoutInflater li -> c
+    void setRecords(org.json.JSONArray) -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.brightleafsoftware.casephotographer.SFImageAdapter -> com.brightleafsoftware.casephotographer.p:
+    java.util.ArrayList images -> a
+    android.content.Context ctx -> b
+    int ZOOM_SIZE -> c
+    void setImages(java.util.ArrayList) -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.graphics.Bitmap getThumb(java.lang.String,int) -> b
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.content.Context access$0(com.brightleafsoftware.casephotographer.SFImageAdapter) -> a
+    java.util.ArrayList access$1(com.brightleafsoftware.casephotographer.SFImageAdapter) -> b
+    int access$2() -> a
+    android.graphics.Bitmap access$3$7e21c052(java.lang.String,int) -> a
+com.brightleafsoftware.casephotographer.SFImageAdapter$zoomClickListener -> com.brightleafsoftware.casephotographer.q:
+    int position -> b
+    com.brightleafsoftware.casephotographer.SFImageAdapter this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.brightleafsoftware.casephotographer.SalesforceRImpl -> com.brightleafsoftware.casephotographer.r:
+    int stringAccountType() -> a
+    int layoutLogin() -> b
+    int idLoginWebView() -> c
+    int stringGenericError() -> d
+    int stringGenericAuthenticationErrorTitle() -> e
+    int stringGenericAuthenticationErrorBody() -> f
+    int menuLogin() -> g
+    int idAuthContainer() -> h
+    int idItemClearCookies() -> i
+    int idItemPickServer() -> j
+    int idItemReload() -> k
+    int idLoadSeparator() -> l
+    int idLoadSpinner() -> m
+    int idServerName() -> n
+    int styleTextHostName() -> o
+    int styleTextHostUrl() -> p
+    int layoutPasscode() -> q
+    int idPasscodeTitle() -> r
+    int idPasscodeError() -> s
+    int idPasscodeInstructions() -> t
+    int idPasscodeText() -> u
+    int stringPasscodeCreateTitle() -> v
+    int stringPasscodeEnterTitle() -> w
+    int stringPasscodeConfirmTitle() -> x
+    int stringPasscodeEnterInstructions() -> y
+    int stringPasscodeCreateInstructions() -> z
+    int stringPasscodeConfirmInstructions() -> A
+    int stringPasscodeMinLength() -> B
+    int stringPasscodeTryAgain() -> C
+    int stringPasscodeFinal() -> D
+    int stringPasscodesDontMatch() -> E
+    int idPickerCustomLabel() -> F
+    int idPickerCustomUrl() -> G
+    int stringServerUrlDefaultCustomLabel() -> H
+    int stringServerUrlDefaultCustomUrl() -> I
+    int stringServerUrlAddTitle() -> J
+    int stringServerUrlEditTitle() -> K
+    int layoutCustomServerUrl() -> L
+    int idApplyButton() -> M
+    int idCancelButton() -> N
+    int stringInvalidServerUrl() -> O
+    int idServerListGroup() -> P
+    int layoutServerPicker() -> Q
+    int stringAuthLoginProduction() -> R
+    int stringAuthLoginSandbox() -> S
+    int menuClearCustomUrl() -> T
+    int idMenuClearCustomUrl() -> U
+    int drawableEditIcon() -> V
+    int idShowCustomUrlEdit() -> W
+com.google.common.base.Joiner -> com.a.a.a.a:
+    java.lang.String separator -> a
+    com.google.common.base.Joiner on(java.lang.String) -> a
+    com.google.common.base.Joiner$MapJoiner withKeyValueSeparator(java.lang.String) -> b
+com.google.common.base.Joiner$MapJoiner -> com.a.a.a.b:
+    com.google.common.base.Joiner joiner -> a
+    java.lang.String keyValueSeparator -> b
+com.google.common.base.Preconditions -> com.a.a.a.c:
+    java.lang.Object checkNotNull(java.lang.Object) -> a
+com.google.common.collect.Collections2 -> com.a.a.b.a:
+    com.google.common.base.Joiner STANDARD_JOINER -> a
+com.google.common.collect.Maps -> com.a.a.b.b:
+    com.google.common.base.Joiner$MapJoiner STANDARD_JOINER -> a
+    java.util.HashMap newHashMap() -> a
+com.phonegap.CallbackServer -> com.phonegap.a:
+    java.util.LinkedList javascript -> a
+    int port -> b
+    java.lang.Thread serverThread -> c
+    boolean active -> d
+    boolean empty -> e
+    boolean usePolling -> f
+    java.lang.String token -> g
+    void init(java.lang.String) -> a
+    void reinit(java.lang.String) -> b
+    boolean usePolling() -> a
+    int getPort() -> b
+    java.lang.String getToken() -> c
+    void startServer() -> g
+    void restartServer() -> d
+    void run() -> run
+    void stopServer() -> h
+    void destroy() -> e
+    java.lang.String getJavascript() -> f
+    void sendJavascript(java.lang.String) -> c
+    java.lang.String encode(java.lang.String,java.lang.String) -> a
+    void convert(java.lang.String,java.lang.StringBuilder,java.lang.String) -> a
+com.phonegap.DroidGap -> com.phonegap.DroidGap:
+    java.lang.String TAG -> a
+    android.webkit.WebView appView -> b
+    android.webkit.WebViewClient webViewClient -> c
+    java.util.ArrayList whiteList -> o
+    java.util.HashMap whiteListCache -> p
+    android.widget.LinearLayout root -> d
+    boolean bound -> e
+    com.phonegap.CallbackServer callbackServer -> f
+    com.phonegap.api.PluginManager pluginManager -> g
+    boolean cancelLoadUrl -> h
+    android.app.ProgressDialog spinnerDialog -> i
+    java.lang.String url -> q
+    java.util.Stack urls -> r
+    java.lang.String initUrl -> s
+    int ACTIVITY_STARTING -> t
+    int ACTIVITY_RUNNING -> u
+    int ACTIVITY_EXITING -> v
+    int activityState -> w
+    java.lang.String baseUrl -> x
+    com.phonegap.api.IPlugin activityResultCallback -> j
+    boolean activityResultKeepRunning -> k
+    int loadUrlTimeout -> y
+    int backgroundColor -> z
+    int splashscreen -> l
+    int loadUrlTimeoutValue -> m
+    boolean keepRunning -> n
+    void onCreate(android.os.Bundle) -> onCreate
+    void init() -> a
+    com.phonegap.DroidGap$GapViewClient createWebViewClient() -> b
+    void loadUrl(java.lang.String) -> a
+    void loadUrlIntoView(java.lang.String) -> e
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    int getIntegerProperty(java.lang.String,int) -> a
+    java.lang.String getStringProperty$7157d249(java.lang.String) -> b
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onDestroy() -> onDestroy
+    void sendJavascript(java.lang.String) -> c
+    void showWebPage$471b056c$44c588bf(java.lang.String) -> d
+    void spinnerStart(java.lang.String,java.lang.String) -> a
+    void spinnerStop() -> c
+    void endActivity() -> d
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onReceivedError$6ef37c42(java.lang.String,java.lang.String) -> b
+    void displayError$78a511a1(java.lang.String,java.lang.String,java.lang.String) -> a
+    void loadConfiguration() -> e
+    void addWhiteListEntry(java.lang.String,boolean) -> a
+    boolean isUrlWhiteListed(java.lang.String) -> f
+    java.lang.String access$0(com.phonegap.DroidGap) -> a
+    boolean access$1(com.phonegap.DroidGap,java.lang.String) -> a
+    int access$2(com.phonegap.DroidGap) -> b
+    void access$3(com.phonegap.DroidGap,int) -> a
+    void access$4(com.phonegap.DroidGap) -> c
+    java.util.Stack access$5(com.phonegap.DroidGap) -> d
+com.phonegap.DroidGap$1 -> com.phonegap.b:
+    com.phonegap.DroidGap this$0 -> a
+    com.phonegap.DroidGap val$me -> b
+    java.lang.String val$url -> c
+    void run() -> run
+com.phonegap.DroidGap$1$1 -> com.phonegap.c:
+    com.phonegap.DroidGap$1 this$1 -> a
+    com.phonegap.DroidGap val$me -> b
+    int val$currentLoadUrlTimeout -> c
+    java.lang.String val$url -> d
+    void run() -> run
+com.phonegap.DroidGap$4 -> com.phonegap.d:
+    com.phonegap.DroidGap this$0 -> a
+    com.phonegap.DroidGap val$me -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.phonegap.DroidGap$5 -> com.phonegap.e:
+    com.phonegap.DroidGap this$0 -> a
+    com.phonegap.DroidGap val$me -> b
+    java.lang.String val$errorUrl -> c
+    void run() -> run
+com.phonegap.DroidGap$6 -> com.phonegap.f:
+    com.phonegap.DroidGap this$0 -> a
+    com.phonegap.DroidGap val$me -> b
+    java.lang.String val$description -> c
+    java.lang.String val$failingUrl -> d
+    void run() -> run
+com.phonegap.DroidGap$7 -> com.phonegap.g:
+    com.phonegap.DroidGap this$0 -> a
+    com.phonegap.DroidGap val$me -> b
+    java.lang.String val$message -> c
+    java.lang.String val$title -> d
+    java.lang.String val$button -> e
+    boolean val$exit -> f
+    void run() -> run
+com.phonegap.DroidGap$7$1 -> com.phonegap.h:
+    com.phonegap.DroidGap$7 this$1 -> a
+    boolean val$exit -> b
+    com.phonegap.DroidGap val$me -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient -> com.phonegap.i:
+    java.lang.String TAG -> b
+    long MAX_QUOTA -> c
+    com.phonegap.DroidGap ctx -> d
+    com.phonegap.DroidGap this$0 -> a
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+    void onExceededDatabaseQuota(java.lang.String,java.lang.String,long,long,long,android.webkit.WebStorage$QuotaUpdater) -> onExceededDatabaseQuota
+    void onConsoleMessage(java.lang.String,int,java.lang.String) -> onConsoleMessage
+    boolean onConsoleMessage(android.webkit.ConsoleMessage) -> onConsoleMessage
+    void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
+com.phonegap.DroidGap$GapClient$1 -> com.phonegap.j:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$2 -> com.phonegap.k:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.phonegap.DroidGap$GapClient$3 -> com.phonegap.l:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+com.phonegap.DroidGap$GapClient$4 -> com.phonegap.m:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$5 -> com.phonegap.n:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$6 -> com.phonegap.o:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.phonegap.DroidGap$GapClient$7 -> com.phonegap.p:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsResult val$result -> b
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+com.phonegap.DroidGap$GapClient$8 -> com.phonegap.q:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.widget.EditText val$input -> b
+    android.webkit.JsPromptResult val$res -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$9 -> com.phonegap.r:
+    com.phonegap.DroidGap$GapClient this$1 -> a
+    android.webkit.JsPromptResult val$res -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapViewClient -> com.phonegap.s:
+    com.phonegap.DroidGap ctx -> a
+    com.phonegap.DroidGap this$0 -> b
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onReceivedSslError(android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError) -> onReceivedSslError
+    com.phonegap.DroidGap access$0(com.phonegap.DroidGap$GapViewClient) -> a
+com.phonegap.DroidGap$GapViewClient$1 -> com.phonegap.t:
+    com.phonegap.DroidGap$GapViewClient this$1 -> a
+    void run() -> run
+com.phonegap.DroidGap$GapViewClient$1$1 -> com.phonegap.u:
+    com.phonegap.DroidGap$GapViewClient$1 this$2 -> a
+    void run() -> run
+com.phonegap.DroidGap$LinearLayoutSoftKeyboardDetect -> com.phonegap.v:
+    int oldHeight -> b
+    int oldWidth -> c
+    int screenWidth -> d
+    int screenHeight -> e
+    com.phonegap.DroidGap this$0 -> a
+    void onMeasure(int,int) -> onMeasure
+com.phonegap.StandAlone -> com.phonegap.StandAlone:
+    void onCreate(android.os.Bundle) -> onCreate
+com.phonegap.WebViewReflect -> com.phonegap.w:
+    java.lang.reflect.Method mWebSettings_setDatabaseEnabled -> a
+    java.lang.reflect.Method mWebSettings_setDatabasePath -> b
+    java.lang.reflect.Method mWebSettings_setDomStorageEnabled -> c
+    java.lang.reflect.Method mWebSettings_setGeolocationEnabled -> d
+    void checkCompatibility() -> a
+    void setGeolocationEnabled$1ffbdba(android.webkit.WebSettings) -> a
+    void setDomStorage(android.webkit.WebSettings) -> b
+com.phonegap.api.IPlugin -> com.phonegap.api.a:
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch$552c4dfd() -> a
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    void setView(android.webkit.WebView) -> a
+    void onPause$1385ff() -> b
+    void onResume$1385ff() -> c
+    void onNewIntent$14d1abce() -> d
+    void onDestroy() -> e
+    void onActivityResult$6eb84b52() -> f
+    boolean onOverrideUrlLoading$552c4dfd() -> g
+com.phonegap.api.LOG -> com.phonegap.api.b:
+    int LOGLEVEL -> a
+    void setLogLevel(java.lang.String) -> a
+    void v(java.lang.String,java.lang.String) -> a
+    void d(java.lang.String,java.lang.String) -> b
+    void i(java.lang.String,java.lang.String) -> c
+    void e(java.lang.String,java.lang.String) -> d
+    void e(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void v(java.lang.String,java.lang.String,java.lang.Object[]) -> a
+    void d(java.lang.String,java.lang.String,java.lang.Object[]) -> b
+    void i(java.lang.String,java.lang.String,java.lang.Object[]) -> c
+com.phonegap.api.PhonegapActivity -> com.phonegap.api.PhonegapActivity:
+    void sendJavascript(java.lang.String) -> c
+com.phonegap.api.Plugin -> com.phonegap.api.c:
+    android.webkit.WebView webView -> a
+    com.phonegap.api.PhonegapActivity ctx -> b
+    boolean isSynch$552c4dfd() -> a
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    void setView(android.webkit.WebView) -> a
+    void onPause$1385ff() -> b
+    void onResume$1385ff() -> c
+    void onNewIntent$14d1abce() -> d
+    void onDestroy() -> e
+    void onActivityResult$6eb84b52() -> f
+    boolean onOverrideUrlLoading$552c4dfd() -> g
+    void success(com.phonegap.api.PluginResult,java.lang.String) -> a
+    void error(java.lang.String,java.lang.String) -> a
+com.phonegap.api.PluginManager -> com.phonegap.api.d:
+    java.util.HashMap plugins -> b
+    java.util.HashMap services -> c
+    com.phonegap.api.PhonegapActivity ctx -> d
+    android.webkit.WebView app -> e
+    java.util.HashMap urlMap -> a
+    void reinit() -> a
+    void loadPlugins() -> f
+    java.lang.String exec(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    com.phonegap.api.IPlugin addPlugin$3e0bff2(java.lang.String) -> b
+    com.phonegap.api.IPlugin getPlugin(java.lang.String) -> c
+    void onPause$1385ff() -> b
+    void onResume$1385ff() -> c
+    void onDestroy() -> d
+    void onNewIntent$14d1abce() -> e
+    boolean onOverrideUrlLoading(java.lang.String) -> a
+com.phonegap.api.PluginManager$1 -> com.phonegap.api.e:
+    com.phonegap.api.PluginManager this$0 -> a
+    com.phonegap.api.IPlugin val$plugin -> b
+    java.lang.String val$action -> c
+    org.json.JSONArray val$args -> d
+    java.lang.String val$callbackId -> e
+    com.phonegap.api.PhonegapActivity val$ctx -> f
+    void run() -> run
+com.phonegap.api.PluginResult -> com.phonegap.api.f:
+    int status -> b
+    java.lang.String message -> c
+    boolean keepCallback -> d
+    java.lang.String cast -> e
+    java.lang.String[] StatusMessages -> a
+    void setKeepCallback$1385ff() -> a
+    int getStatus() -> b
+    boolean getKeepCallback() -> c
+    java.lang.String getJSONString() -> d
+    java.lang.String toSuccessCallbackString(java.lang.String) -> a
+    java.lang.String toErrorCallbackString(java.lang.String) -> b
+com.phonegap.api.PluginResult$Status -> com.phonegap.api.g:
+    com.phonegap.api.PluginResult$Status NO_RESULT -> a
+    com.phonegap.api.PluginResult$Status OK -> b
+    com.phonegap.api.PluginResult$Status CLASS_NOT_FOUND_EXCEPTION -> c
+    com.phonegap.api.PluginResult$Status ILLEGAL_ACCESS_EXCEPTION -> d
+    com.phonegap.api.PluginResult$Status INSTANTIATION_EXCEPTION -> e
+    com.phonegap.api.PluginResult$Status MALFORMED_URL_EXCEPTION -> f
+    com.phonegap.api.PluginResult$Status IO_EXCEPTION -> g
+    com.phonegap.api.PluginResult$Status INVALID_ACTION -> h
+    com.phonegap.api.PluginResult$Status JSON_EXCEPTION -> i
+    com.phonegap.api.PluginResult$Status ERROR -> j
+    com.phonegap.api.PluginResult$Status[] ENUM$VALUES -> k
+    com.phonegap.api.PluginResult$Status[] values() -> values
+    com.phonegap.api.PluginResult$Status valueOf(java.lang.String) -> valueOf
+com.salesforce.androidsdk.app.ForceApp -> com.salesforce.androidsdk.app.ForceApp:
+    com.salesforce.androidsdk.app.ForceApp APP -> b
+    com.salesforce.androidsdk.security.PasscodeManager passcodeManager -> a
+    java.util.Map uuids -> c
+    java.lang.Class getMainActivityClass() -> b
+    com.salesforce.androidsdk.ui.SalesforceR getSalesforceR() -> c
+    java.lang.String getKey(java.lang.String) -> a
+    java.lang.Class getLoginActivityClass() -> d
+    void onCreate() -> onCreate
+    com.salesforce.androidsdk.security.PasscodeManager getPasscodeManager() -> e
+    java.lang.String getPasscodeHash() -> f
+    java.lang.String getApplicationName() -> g
+    void logout(android.app.Activity) -> a
+    java.lang.String getUserAgent() -> h
+    java.lang.String getAccountType() -> i
+    boolean isTablet() -> j
+    java.lang.String toString() -> toString
+    java.lang.String getUuId(java.lang.String) -> b
+com.salesforce.androidsdk.app.ForceApp$1 -> com.salesforce.androidsdk.app.a:
+    com.salesforce.androidsdk.app.ForceApp this$0 -> a
+    void run(android.accounts.AccountManagerFuture) -> run
+com.salesforce.androidsdk.auth.AuthenticatorService -> com.salesforce.androidsdk.auth.AuthenticatorService:
+    com.salesforce.androidsdk.auth.AuthenticatorService$Authenticator authenticator -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+com.salesforce.androidsdk.auth.AuthenticatorService$Authenticator -> com.salesforce.androidsdk.auth.a:
+    android.content.Context context -> a
+    android.os.Bundle addAccount(android.accounts.AccountAuthenticatorResponse,java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle) -> addAccount
+    android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> getAuthToken
+    android.os.Bundle makeAuthIntentBundle(android.accounts.AccountAuthenticatorResponse,android.os.Bundle) -> a
+    android.os.Bundle updateCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> updateCredentials
+    android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle) -> confirmCredentials
+    android.os.Bundle editProperties(android.accounts.AccountAuthenticatorResponse,java.lang.String) -> editProperties
+    java.lang.String getAuthTokenLabel(java.lang.String) -> getAuthTokenLabel
+    android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[]) -> hasFeatures
+com.salesforce.androidsdk.auth.HttpAccess -> com.salesforce.androidsdk.auth.HttpAccess:
+    android.app.Application app -> c
+    android.net.http.AndroidHttpClient http -> d
+    boolean hasNetwork -> e
+    int currentNetworkSubType -> f
+    java.lang.String networkFailReason -> g
+    java.lang.String userAgent -> h
+    android.net.ConnectivityManager conMgr -> i
+    com.salesforce.androidsdk.auth.HttpAccess DEFAULT -> a
+    boolean $assertionsDisabled -> b
+    void init(android.app.Application,java.lang.String) -> a
+    android.net.http.AndroidHttpClient getHttpClient() -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    void resetNetwork() -> b
+    boolean hasNetwork() -> c
+    void setHasNetwork(boolean,java.lang.String) -> a
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doPost(java.util.Map,java.net.URI,org.apache.http.HttpEntity) -> a
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doPatch(java.util.Map,java.net.URI,org.apache.http.HttpEntity) -> b
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doPut(java.util.Map,java.net.URI,org.apache.http.HttpEntity) -> c
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doGet(java.util.Map,java.net.URI) -> a
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doHead(java.util.Map,java.net.URI) -> b
+    com.salesforce.androidsdk.auth.HttpAccess$Execution doDelete(java.util.Map,java.net.URI) -> c
+    com.salesforce.androidsdk.auth.HttpAccess$Execution execute(java.util.Map,org.apache.http.client.methods.HttpRequestBase) -> a
+    com.salesforce.androidsdk.auth.HttpAccess$Execution execute(org.apache.http.client.methods.HttpRequestBase) -> a
+    android.net.http.AndroidHttpClient access$000(com.salesforce.androidsdk.auth.HttpAccess) -> a
+    android.net.http.AndroidHttpClient access$002(com.salesforce.androidsdk.auth.HttpAccess,android.net.http.AndroidHttpClient) -> a
+    android.net.http.AndroidHttpClient access$100(com.salesforce.androidsdk.auth.HttpAccess) -> b
+com.salesforce.androidsdk.auth.HttpAccess$1 -> com.salesforce.androidsdk.auth.b:
+    com.salesforce.androidsdk.auth.HttpAccess this$0 -> a
+    void run() -> run
+com.salesforce.androidsdk.auth.HttpAccess$Execution -> com.salesforce.androidsdk.auth.c:
+    org.apache.http.client.methods.HttpRequestBase request -> a
+    org.apache.http.HttpResponse response -> b
+com.salesforce.androidsdk.auth.HttpAccess$GzipDecompressingEntity -> com.salesforce.androidsdk.auth.d:
+    java.io.InputStream getContent() -> getContent
+    long getContentLength() -> getContentLength
+com.salesforce.androidsdk.auth.HttpAccess$HttpPatch -> com.salesforce.androidsdk.auth.e:
+    java.lang.String getMethod() -> getMethod
+com.salesforce.androidsdk.auth.HttpAccess$NoNetworkException -> com.salesforce.androidsdk.auth.f:
+com.salesforce.androidsdk.auth.OAuth2 -> com.salesforce.androidsdk.auth.g:
+    java.net.URI getAuthorizationUrl(java.net.URI,java.lang.String,java.lang.String,java.lang.String[]) -> a
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse refreshAuthToken(com.salesforce.androidsdk.auth.HttpAccess,java.net.URI,java.lang.String,java.lang.String,java.lang.String) -> a
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse makeTokenEndpointRequest(com.salesforce.androidsdk.auth.HttpAccess,java.net.URI,java.util.List) -> a
+com.salesforce.androidsdk.auth.OAuth2$AbstractResponse -> com.salesforce.androidsdk.auth.h:
+    org.json.JSONObject parseResponse(org.apache.http.HttpResponse) -> a
+com.salesforce.androidsdk.auth.OAuth2$IdServiceResponse -> com.salesforce.androidsdk.auth.i:
+    java.lang.String username -> a
+    int pinLength -> b
+    int screenLockTimeout -> c
+com.salesforce.androidsdk.auth.OAuth2$OAuthFailedException -> com.salesforce.androidsdk.auth.j:
+    com.salesforce.androidsdk.auth.OAuth2$TokenErrorResponse response -> a
+    int httpStatusCode -> b
+    boolean isRefreshTokenInvalid() -> a
+com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse -> com.salesforce.androidsdk.auth.k:
+    java.lang.String authToken -> a
+    java.lang.String refreshToken -> b
+    java.lang.String instanceUrl -> c
+    java.lang.String idUrl -> d
+    java.lang.String idUrlWithInstance -> e
+    java.lang.String orgId -> f
+    java.lang.String userId -> g
+    java.lang.String code -> h
+    void computeOtherFields() -> a
+com.salesforce.androidsdk.auth.OAuth2$TokenErrorResponse -> com.salesforce.androidsdk.auth.l:
+    java.lang.String error -> a
+    java.lang.String errorDescription -> b
+    java.lang.String toString() -> toString
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin -> com.salesforce.androidsdk.a.a:
+    com.salesforce.androidsdk.rest.ClientManager clientManager -> c
+    com.salesforce.androidsdk.rest.RestClient client -> d
+    boolean autoRefreshOnForeground -> e
+    boolean autoRefreshPeriodically -> f
+    long lastRefreshTime -> g
+    void autoRefresh(android.webkit.WebView,com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean shouldAutoRefreshPeriodically() -> h
+    boolean shouldAutoRefreshOnForeground() -> i
+    org.json.JSONObject getJSONCredentials(com.salesforce.androidsdk.rest.RestClient) -> d
+    java.lang.String[] jsonArrayToArray(org.json.JSONArray) -> a
+    void logout(android.app.Activity) -> a
+    void addSidCookieForDomain(android.webkit.CookieManager,java.lang.String,java.lang.String) -> a
+    void access$000() -> j
+    com.salesforce.androidsdk.rest.RestClient access$100() -> k
+    void access$200$4e872e8f(com.salesforce.androidsdk.rest.RestClient) -> a
+    org.json.JSONObject access$300(com.salesforce.androidsdk.rest.RestClient) -> b
+    com.salesforce.androidsdk.rest.RestClient access$102(com.salesforce.androidsdk.rest.RestClient) -> c
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$1 -> com.salesforce.androidsdk.a.b:
+    android.webkit.WebView val$webView -> a
+    com.phonegap.api.PhonegapActivity val$ctx -> b
+    void onSuccess$7cb1c4b1() -> a
+    void onError(java.lang.Exception) -> a
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$2 -> com.salesforce.androidsdk.a.c:
+    java.lang.String val$callbackId -> a
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin this$0 -> b
+    void authenticatedRestClient(com.salesforce.androidsdk.rest.RestClient) -> a
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$2$1 -> com.salesforce.androidsdk.a.d:
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$2 this$1 -> a
+    void onSuccess$7cb1c4b1() -> a
+    void onError(java.lang.Exception) -> a
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$3 -> com.salesforce.androidsdk.a.e:
+    int[] $SwitchMap$com$salesforce$androidsdk$phonegap$SalesforceOAuthPlugin$Action -> a
+com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action -> com.salesforce.androidsdk.a.f:
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action authenticate -> a
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action getAuthCredentials -> b
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action logoutCurrentUser -> c
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action getAppHomeUrl -> d
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action[] $VALUES -> e
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action[] values() -> values
+    com.salesforce.androidsdk.phonegap.SalesforceOAuthPlugin$Action valueOf(java.lang.String) -> valueOf
+com.salesforce.androidsdk.rest.ClientManager -> com.salesforce.androidsdk.b.a:
+    android.accounts.AccountManager accountManager -> a
+    java.lang.String accountType -> b
+    com.salesforce.androidsdk.rest.ClientManager$LoginOptions loginOptions -> c
+    void getRestClient(android.app.Activity,com.salesforce.androidsdk.rest.ClientManager$RestClientCallback) -> a
+    com.salesforce.androidsdk.rest.RestClient peekRestClient() -> a
+    void invalidateToken(java.lang.String) -> a
+    android.accounts.Account getAccount() -> b
+    android.accounts.Account[] getAccounts() -> c
+    void removeAccounts(android.accounts.Account[]) -> a
+    android.os.Bundle createNewAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void removeAccountAsync(android.accounts.AccountManagerCallback) -> a
+    com.salesforce.androidsdk.rest.ClientManager$LoginOptions access$000(com.salesforce.androidsdk.rest.ClientManager) -> a
+    android.accounts.AccountManager access$100(com.salesforce.androidsdk.rest.ClientManager) -> b
+com.salesforce.androidsdk.rest.ClientManager$AccMgrAuthTokenProvider -> com.salesforce.androidsdk.b.b:
+    boolean gettingAuthToken -> a
+    java.lang.Object lock -> b
+    com.salesforce.androidsdk.rest.ClientManager clientManager -> c
+    java.lang.String lastNewAuthToken -> d
+    java.lang.String refreshToken -> e
+    long lastRefreshTime -> f
+    java.lang.String getNewAuthToken() -> a
+    java.lang.String getRefreshToken() -> b
+    long getLastRefreshTime() -> c
+com.salesforce.androidsdk.rest.ClientManager$AccMgrCallback -> com.salesforce.androidsdk.b.c:
+    com.salesforce.androidsdk.rest.ClientManager$RestClientCallback restCallback -> c
+    boolean $assertionsDisabled -> a
+    com.salesforce.androidsdk.rest.ClientManager this$0 -> b
+    void run(android.accounts.AccountManagerFuture) -> run
+com.salesforce.androidsdk.rest.ClientManager$AccountInfoNotFoundException -> com.salesforce.androidsdk.b.d:
+com.salesforce.androidsdk.rest.ClientManager$LoginOptions -> com.salesforce.androidsdk.b.e:
+    java.lang.String loginUrl -> a
+    java.lang.String passcodeHash -> b
+    java.lang.String oauthCallbackUrl -> c
+    java.lang.String oauthClientId -> d
+    java.lang.String[] oauthScopes -> e
+    android.os.Bundle bundle -> g
+    java.lang.String clientSecret -> f
+    android.os.Bundle asBundle() -> a
+    com.salesforce.androidsdk.rest.ClientManager$LoginOptions fromBundle(android.os.Bundle) -> a
+com.salesforce.androidsdk.rest.ClientManager$RestClientCallback -> com.salesforce.androidsdk.b.f:
+    void authenticatedRestClient(com.salesforce.androidsdk.rest.RestClient) -> a
+com.salesforce.androidsdk.rest.RestClient -> com.salesforce.androidsdk.b.g:
+    com.salesforce.androidsdk.rest.RestClient$ClientInfo clientInfo -> a
+    com.salesforce.androidsdk.rest.RestClient$AuthTokenProvider authTokenProvider -> b
+    com.salesforce.androidsdk.auth.HttpAccess httpAccessor -> c
+    java.lang.String authToken -> d
+    java.lang.String toString() -> toString
+    java.lang.String getAuthToken() -> a
+    void setAuthToken(java.lang.String) -> a
+    java.lang.String getRefreshToken() -> b
+    com.salesforce.androidsdk.rest.RestClient$ClientInfo getClientInfo() -> c
+    void sendAsync(com.salesforce.androidsdk.rest.RestRequest,com.salesforce.androidsdk.rest.RestClient$AsyncRequestCallback) -> a
+    com.salesforce.androidsdk.rest.RestResponse sendSync(com.salesforce.androidsdk.rest.RestRequest) -> a
+com.salesforce.androidsdk.rest.RestClient$1 -> com.salesforce.androidsdk.b.h:
+    int[] $SwitchMap$com$salesforce$androidsdk$rest$RestRequest$RestMethod -> a
+com.salesforce.androidsdk.rest.RestClient$AsyncRequestCallback -> com.salesforce.androidsdk.b.i:
+    void onSuccess$7cb1c4b1() -> a
+    void onError(java.lang.Exception) -> a
+com.salesforce.androidsdk.rest.RestClient$AuthTokenProvider -> com.salesforce.androidsdk.b.j:
+    java.lang.String getNewAuthToken() -> a
+    java.lang.String getRefreshToken() -> b
+    long getLastRefreshTime() -> c
+com.salesforce.androidsdk.rest.RestClient$ClientInfo -> com.salesforce.androidsdk.b.k:
+    java.lang.String clientId -> a
+    java.net.URI instanceUrl -> b
+    java.net.URI loginUrl -> c
+    java.lang.String accountName -> d
+    java.lang.String username -> e
+    java.lang.String userId -> f
+    java.lang.String orgId -> g
+    java.lang.String toString() -> toString
+com.salesforce.androidsdk.rest.RestClient$RestCallTask -> com.salesforce.androidsdk.b.l:
+    com.salesforce.androidsdk.rest.RestRequest request -> b
+    java.lang.Exception exceptionThrown -> c
+    com.salesforce.androidsdk.rest.RestClient$AsyncRequestCallback callback -> d
+    com.salesforce.androidsdk.rest.RestClient this$0 -> a
+    com.salesforce.androidsdk.rest.RestResponse doInBackground(com.salesforce.androidsdk.rest.RestRequest[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.salesforce.androidsdk.rest.RestRequest -> com.salesforce.androidsdk.b.m:
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod method -> a
+    java.lang.String path -> b
+    org.apache.http.HttpEntity requestEntity -> c
+    java.util.Map additionalHttpHeaders -> d
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod getMethod() -> a
+    java.lang.String getPath() -> b
+    org.apache.http.HttpEntity getRequestEntity() -> c
+    java.util.Map getAdditionalHttpHeaders() -> d
+    java.lang.String toString() -> toString
+    com.salesforce.androidsdk.rest.RestRequest getRequestForResources(java.lang.String) -> a
+    com.salesforce.androidsdk.rest.RestRequest getRequestForCreate(java.lang.String,java.lang.String,java.util.Map) -> a
+    com.salesforce.androidsdk.rest.RestRequest getRequestForSearch(java.lang.String,java.lang.String) -> a
+    com.salesforce.androidsdk.rest.RestRequest getRequestForQuery(java.lang.String,java.lang.String) -> b
+com.salesforce.androidsdk.rest.RestRequest$RestAction -> com.salesforce.androidsdk.b.n:
+    com.salesforce.androidsdk.rest.RestRequest$RestAction VERSIONS -> a
+    com.salesforce.androidsdk.rest.RestRequest$RestAction RESOURCES -> b
+    com.salesforce.androidsdk.rest.RestRequest$RestAction DESCRIBE_GLOBAL -> c
+    com.salesforce.androidsdk.rest.RestRequest$RestAction METADATA -> d
+    com.salesforce.androidsdk.rest.RestRequest$RestAction DESCRIBE -> e
+    com.salesforce.androidsdk.rest.RestRequest$RestAction CREATE -> f
+    com.salesforce.androidsdk.rest.RestRequest$RestAction RETRIEVE -> g
+    com.salesforce.androidsdk.rest.RestRequest$RestAction UPSERT -> h
+    com.salesforce.androidsdk.rest.RestRequest$RestAction UPDATE -> i
+    com.salesforce.androidsdk.rest.RestRequest$RestAction DELETE -> j
+    com.salesforce.androidsdk.rest.RestRequest$RestAction QUERY -> k
+    com.salesforce.androidsdk.rest.RestRequest$RestAction SEARCH -> l
+    java.lang.String pathTemplate -> m
+    com.salesforce.androidsdk.rest.RestRequest$RestAction[] $VALUES -> n
+    com.salesforce.androidsdk.rest.RestRequest$RestAction[] values() -> values
+    com.salesforce.androidsdk.rest.RestRequest$RestAction valueOf(java.lang.String) -> valueOf
+    java.lang.String getPath(java.lang.Object[]) -> a
+com.salesforce.androidsdk.rest.RestRequest$RestMethod -> com.salesforce.androidsdk.b.o:
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod GET -> a
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod POST -> b
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod PUT -> c
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod DELETE -> d
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod HEAD -> e
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod PATCH -> f
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod[] $VALUES -> g
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod[] values() -> values
+    com.salesforce.androidsdk.rest.RestRequest$RestMethod valueOf(java.lang.String) -> valueOf
+com.salesforce.androidsdk.rest.RestResponse -> com.salesforce.androidsdk.b.p:
+    int statusCode -> a
+    org.apache.http.HttpResponse response -> b
+    byte[] responseAsBytes -> c
+    java.lang.String responseCharSet -> d
+    java.lang.String responseAsString -> e
+    org.json.JSONObject responseAsJSONObject -> f
+    org.json.JSONArray responseAsJSONArray -> g
+    int getStatusCode() -> a
+    boolean isSuccess() -> b
+    void consume() -> c
+    byte[] asBytes() -> d
+    java.lang.String asString() -> e
+    org.json.JSONObject asJSONObject() -> f
+    org.json.JSONArray asJSONArray() -> g
+    java.lang.String toString() -> toString
+com.salesforce.androidsdk.security.Encryptor -> com.salesforce.androidsdk.c.a:
+    boolean isFileSystemEncrypted -> a
+    java.lang.String bestCipherAvailable -> b
+    boolean init(android.content.Context) -> a
+    javax.crypto.Cipher getBestCipher() -> b
+    boolean isFileSystemEncrypted() -> a
+    java.lang.String decrypt(java.lang.String,java.lang.String) -> a
+    java.lang.String encrypt(java.lang.String,java.lang.String) -> b
+    java.lang.String hash(java.lang.String,java.lang.String) -> c
+com.salesforce.androidsdk.security.PasscodeManager -> com.salesforce.androidsdk.c.b:
+    java.lang.String passcodeHash -> a
+    com.salesforce.androidsdk.security.PasscodeManager$HashConfig verificationHashConfig -> b
+    com.salesforce.androidsdk.security.PasscodeManager$HashConfig encryptionHashConfig -> c
+    int failedPasscodeAttempts -> d
+    android.app.Activity frontActivity -> e
+    android.os.Handler handler -> f
+    long lastActivity -> g
+    boolean locked -> h
+    int timeoutMs -> i
+    int minPasscodeLength -> j
+    boolean enabled -> k
+    void reset(android.content.Context) -> a
+    void setEnabled$1385ff() -> a
+    int addFailedPasscodeAttempt() -> b
+    boolean check(android.content.Context,java.lang.String) -> a
+    void store(android.content.Context,java.lang.String) -> b
+    boolean hasStoredPasscode(android.content.Context) -> b
+    java.lang.String getPasscodeHash() -> c
+    boolean isLocked() -> g
+    boolean lockIfNeeded(android.app.Activity,boolean) -> a
+    void onPause$63a22f9() -> d
+    boolean onResume(android.app.Activity) -> a
+    void recordUserInteraction() -> e
+    void setTimeoutMs(int) -> a
+    int getMinPasscodeLength() -> f
+    void setMinPasscodeLength(int) -> b
+    void unlock(java.lang.String) -> a
+    java.lang.String hash(java.lang.String,com.salesforce.androidsdk.security.PasscodeManager$HashConfig) -> a
+    boolean access$100(com.salesforce.androidsdk.security.PasscodeManager) -> a
+    long access$200(com.salesforce.androidsdk.security.PasscodeManager) -> b
+    int access$300(com.salesforce.androidsdk.security.PasscodeManager) -> c
+    android.os.Handler access$400(com.salesforce.androidsdk.security.PasscodeManager) -> d
+com.salesforce.androidsdk.security.PasscodeManager$HashConfig -> com.salesforce.androidsdk.c.c:
+    java.lang.String prefix -> a
+    java.lang.String suffix -> b
+    java.lang.String key -> c
+com.salesforce.androidsdk.security.PasscodeManager$LockChecker -> com.salesforce.androidsdk.c.d:
+    com.salesforce.androidsdk.security.PasscodeManager this$0 -> a
+    void run() -> run
+com.salesforce.androidsdk.store.DBHelper -> com.salesforce.androidsdk.d.a:
+    com.salesforce.androidsdk.store.DBHelper INSTANCE -> a
+    java.util.Map soupNameToTableNamesMap -> b
+    java.util.Map soupNameToIndexSpecsMap -> c
+    java.util.Map tableNameToNextIdStatementsMap -> d
+    java.util.Map tableNameToInsertHelpersMap -> e
+    com.salesforce.androidsdk.store.DBHelper[] $VALUES -> f
+    com.salesforce.androidsdk.store.DBHelper[] values() -> values
+    com.salesforce.androidsdk.store.DBHelper valueOf(java.lang.String) -> valueOf
+    void cacheTableName(java.lang.String,java.lang.String) -> a
+    java.lang.String getCachedTableName(java.lang.String) -> a
+    void removeFromCache(java.lang.String) -> b
+    android.database.Cursor query$2af7508e(info.guardianproject.database.sqlcipher.SQLiteDatabase,java.lang.String,java.lang.String[],java.lang.String,java.lang.String[]) -> a
+    void delete(info.guardianproject.database.sqlcipher.SQLiteDatabase,java.lang.String,java.lang.String,java.lang.String[]) -> a
+com.salesforce.androidsdk.store.DBOpenHelper -> com.salesforce.androidsdk.d.b:
+    com.salesforce.androidsdk.store.DBOpenHelper openHelper -> a
+    com.salesforce.androidsdk.store.DBOpenHelper getOpenHelper(android.content.Context) -> a
+    void onCreate(info.guardianproject.database.sqlcipher.SQLiteDatabase) -> a
+    void onUpgrade(info.guardianproject.database.sqlcipher.SQLiteDatabase,int,int) -> a
+com.salesforce.androidsdk.store.SmartStore -> com.salesforce.androidsdk.d.c:
+    info.guardianproject.database.sqlcipher.SQLiteDatabase db -> a
+    java.lang.String getSoupTableNameFromDb(java.lang.String) -> b
+    void dropSoup(java.lang.String) -> a
+    java.util.List getAllSoupNames() -> a
+    void safeClose(android.database.Cursor) -> a
+com.salesforce.androidsdk.ui.CustomServerUrlEditor -> com.salesforce.androidsdk.ui.a:
+    boolean isDefault -> a
+    com.salesforce.androidsdk.ui.SalesforceR salesforceR -> b
+    int width -> c
+    java.lang.String getEditDefaultValue(int) -> a
+    java.lang.String getString(int) -> b
+    void onBackPressed() -> onBackPressed
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    android.os.Bundle onSaveInstanceState() -> onSaveInstanceState
+    void onStart() -> onStart
+    void persistEditCtrlInfo(android.os.Bundle,java.lang.String,int) -> a
+    void setEditText(int,java.lang.String) -> a
+    com.salesforce.androidsdk.ui.SalesforceR access$000(com.salesforce.androidsdk.ui.CustomServerUrlEditor) -> a
+    java.lang.String access$100(com.salesforce.androidsdk.ui.CustomServerUrlEditor,int) -> a
+    java.lang.String access$200(com.salesforce.androidsdk.ui.CustomServerUrlEditor,int) -> b
+    void access$300(com.salesforce.androidsdk.ui.CustomServerUrlEditor,int,java.lang.String) -> a
+com.salesforce.androidsdk.ui.CustomServerUrlEditor$1 -> com.salesforce.androidsdk.ui.b:
+    android.content.SharedPreferences val$settings -> a
+    com.salesforce.androidsdk.ui.CustomServerUrlEditor this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.salesforce.androidsdk.ui.CustomServerUrlEditor$2 -> com.salesforce.androidsdk.ui.c:
+    com.salesforce.androidsdk.ui.CustomServerUrlEditor this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.salesforce.androidsdk.ui.CustomServerUrlEditor$3 -> com.salesforce.androidsdk.ui.d:
+    com.salesforce.androidsdk.ui.CustomServerUrlEditor this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.salesforce.androidsdk.ui.LoginActivity -> com.salesforce.androidsdk.ui.LoginActivity:
+    com.salesforce.androidsdk.ui.SalesforceR salesforceR -> a
+    boolean wasBackgrounded -> b
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper webviewHelper -> c
+    android.view.View loadSpinner -> d
+    android.view.View loadSeparator -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void loadingLoginPage(java.lang.String) -> a
+    void onLoadingProgress(int) -> a
+    void onIndeterminateProgress(boolean) -> a
+    void onAccountAuthenticatorResult(android.os.Bundle) -> a
+    void onClearCookiesClick(android.view.View) -> onClearCookiesClick
+    void onReloadClick(android.view.View) -> onReloadClick
+    void onPickServerClick(android.view.View) -> onPickServerClick
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+com.salesforce.androidsdk.ui.OAuthWebviewHelper -> com.salesforce.androidsdk.ui.e:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper$OAuthWebviewHelperEvents callback -> c
+    com.salesforce.androidsdk.rest.ClientManager$LoginOptions loginOptions -> a
+    android.webkit.WebView webview -> d
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper$AccountOptions accountOptions -> e
+    boolean $assertionsDisabled -> b
+    void saveState(android.os.Bundle) -> a
+    void clearCookies() -> a
+    void clearView() -> b
+    void onNewPasscode() -> c
+    android.content.Context getContext() -> d
+    void onAuthFlowError(java.lang.String,java.lang.String) -> a
+    void loadLoginPage() -> e
+    void onAuthFlowComplete(com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse) -> a
+    void addAccount() -> f
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper$OAuthWebviewHelperEvents access$000(com.salesforce.androidsdk.ui.OAuthWebviewHelper) -> a
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper$AccountOptions access$202(com.salesforce.androidsdk.ui.OAuthWebviewHelper,com.salesforce.androidsdk.ui.OAuthWebviewHelper$AccountOptions) -> a
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$1 -> com.salesforce.androidsdk.ui.f:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> a
+    void run() -> run
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$2 -> com.salesforce.androidsdk.ui.g:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> a
+    void run() -> run
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$AccountOptions -> com.salesforce.androidsdk.ui.h:
+    java.lang.String username -> a
+    java.lang.String refreshToken -> b
+    java.lang.String authToken -> c
+    java.lang.String instanceUrl -> d
+    java.lang.String orgId -> e
+    java.lang.String userId -> f
+    android.os.Bundle bundle -> g
+    android.os.Bundle asBundle() -> a
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$AuthWebChromeClient -> com.salesforce.androidsdk.ui.i:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> a
+    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$AuthWebViewClient -> com.salesforce.androidsdk.ui.j:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$BaseFinishAuthFlowTask -> com.salesforce.androidsdk.ui.k:
+    java.lang.Exception backgroundException -> a
+    com.salesforce.androidsdk.auth.OAuth2$IdServiceResponse id -> b
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> c
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse doInBackground(java.lang.Object[]) -> a
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse performRequest(java.lang.Object) -> a
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$FinishAuthTask -> com.salesforce.androidsdk.ui.l:
+    com.salesforce.androidsdk.ui.OAuthWebviewHelper this$0 -> d
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse performRequest(com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse) -> a
+    com.salesforce.androidsdk.auth.OAuth2$TokenEndpointResponse performRequest(java.lang.Object) -> a
+com.salesforce.androidsdk.ui.OAuthWebviewHelper$OAuthWebviewHelperEvents -> com.salesforce.androidsdk.ui.m:
+    void loadingLoginPage(java.lang.String) -> a
+    void onLoadingProgress(int) -> a
+    void onIndeterminateProgress(boolean) -> a
+    void onAccountAuthenticatorResult(android.os.Bundle) -> a
+    void finish() -> finish
+com.salesforce.androidsdk.ui.PasscodeActivity -> com.salesforce.androidsdk.ui.PasscodeActivity:
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode currentMode -> a
+    android.widget.TextView title -> b
+    android.widget.TextView instr -> c
+    android.widget.TextView error -> d
+    android.widget.EditText entry -> e
+    com.salesforce.androidsdk.security.PasscodeManager passcodeManager -> f
+    java.lang.String firstPasscode -> g
+    com.salesforce.androidsdk.ui.SalesforceR salesforceR -> h
+    boolean logoutEnabled -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void setMode(com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode) -> a
+    boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent) -> onEditorAction
+    void done() -> a
+com.salesforce.androidsdk.ui.PasscodeActivity$1 -> com.salesforce.androidsdk.ui.n:
+    int[] $SwitchMap$com$salesforce$androidsdk$ui$PasscodeActivity$PasscodeMode -> a
+com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode -> com.salesforce.androidsdk.ui.o:
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode Create -> a
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode CreateConfirm -> b
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode Check -> c
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode[] $VALUES -> d
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode[] values() -> values
+    com.salesforce.androidsdk.ui.PasscodeActivity$PasscodeMode valueOf(java.lang.String) -> valueOf
+com.salesforce.androidsdk.ui.SalesforceDroidGapActivity -> com.salesforce.androidsdk.ui.SalesforceDroidGapActivity:
+    android.os.Handler periodicAutoRefreshHandler -> o
+    com.salesforce.androidsdk.ui.SalesforceDroidGapActivity$PeriodicAutoRefresher periodicAutoRefresher -> p
+    com.salesforce.androidsdk.security.PasscodeManager passcodeManager -> q
+    void onCreate(android.os.Bundle) -> onCreate
+    void init() -> a
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onUserInteraction() -> onUserInteraction
+    com.phonegap.DroidGap$GapViewClient createWebViewClient() -> b
+    void schedulePeriodicAutoRefresh() -> e
+    android.webkit.WebView access$100(com.salesforce.androidsdk.ui.SalesforceDroidGapActivity) -> a
+com.salesforce.androidsdk.ui.SalesforceDroidGapActivity$PeriodicAutoRefresher -> com.salesforce.androidsdk.ui.p:
+    com.salesforce.androidsdk.ui.SalesforceDroidGapActivity this$0 -> a
+    void run() -> run
+com.salesforce.androidsdk.ui.SalesforceGapViewClient -> com.salesforce.androidsdk.ui.q:
+    java.lang.String TAG -> c
+    java.util.List RESERVED_URL_PATTERNS -> e
+    boolean foundHomeUrl -> d
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+com.salesforce.androidsdk.ui.SalesforceR -> com.salesforce.androidsdk.ui.r:
+    int stringAccountType() -> a
+    int layoutLogin() -> b
+    int idLoginWebView() -> c
+    int stringGenericError() -> d
+    int stringGenericAuthenticationErrorTitle() -> e
+    int stringGenericAuthenticationErrorBody() -> f
+    int menuLogin() -> g
+    int idAuthContainer() -> h
+    int idItemClearCookies() -> i
+    int idItemPickServer() -> j
+    int idItemReload() -> k
+    int idLoadSpinner() -> m
+    int idLoadSeparator() -> l
+    int idServerName() -> n
+    int styleTextHostName() -> o
+    int styleTextHostUrl() -> p
+    int layoutPasscode() -> q
+    int idPasscodeTitle() -> r
+    int idPasscodeError() -> s
+    int idPasscodeInstructions() -> t
+    int idPasscodeText() -> u
+    int stringPasscodeCreateTitle() -> v
+    int stringPasscodeEnterTitle() -> w
+    int stringPasscodeConfirmTitle() -> x
+    int stringPasscodeEnterInstructions() -> y
+    int stringPasscodeCreateInstructions() -> z
+    int stringPasscodeConfirmInstructions() -> A
+    int stringPasscodeMinLength() -> B
+    int stringPasscodeTryAgain() -> C
+    int stringPasscodeFinal() -> D
+    int stringPasscodesDontMatch() -> E
+    int idPickerCustomLabel() -> F
+    int idPickerCustomUrl() -> G
+    int stringServerUrlDefaultCustomLabel() -> H
+    int stringServerUrlDefaultCustomUrl() -> I
+    int stringServerUrlAddTitle() -> J
+    int stringServerUrlEditTitle() -> K
+    int layoutCustomServerUrl() -> L
+    int idApplyButton() -> M
+    int idCancelButton() -> N
+    int stringInvalidServerUrl() -> O
+    int idServerListGroup() -> P
+    int layoutServerPicker() -> Q
+    int stringAuthLoginProduction() -> R
+    int stringAuthLoginSandbox() -> S
+    int menuClearCustomUrl() -> T
+    int idMenuClearCustomUrl() -> U
+    int drawableEditIcon() -> V
+    int idShowCustomUrlEdit() -> W
+com.salesforce.androidsdk.ui.ServerPickerActivity -> com.salesforce.androidsdk.ui.ServerPickerActivity:
+    int customRadioButtonId -> d
+    java.util.ArrayList defaultServers -> e
+    java.util.logging.Logger logger -> f
+    int restoredConfigIndex -> g
+    int startingIndex -> h
+    java.lang.String TAG -> a
+    com.salesforce.androidsdk.ui.CustomServerUrlEditor urlEditDialog -> b
+    com.salesforce.androidsdk.ui.SalesforceR salesforceR -> i
+    boolean wasEditUrlDialogCanceled -> c
+    void clearCustomUrlSetting() -> b
+    int getIndexForCustomUrl() -> a
+    void onBackPressed() -> onBackPressed
+    void onCancel(android.content.DialogInterface) -> onCancel
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+    void onClick(android.view.View) -> onClick
+    void onResetClick(android.view.View) -> onResetClick
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void rebuildDisplay() -> c
+    void setCancelReturnValue(android.view.View) -> setCancelReturnValue
+    void setPositiveReturnValue(android.view.View) -> setPositiveReturnValue
+    void setRadioState(android.widget.RadioGroup,int,boolean,java.lang.String,java.lang.String) -> a
+    void showCustomUrlDialog(android.view.View) -> showCustomUrlDialog
+com.salesforce.androidsdk.ui.ServerPickerActivity$1 -> com.salesforce.androidsdk.ui.s:
+    com.salesforce.androidsdk.ui.ServerPickerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.salesforce.androidsdk.ui.ServerPickerActivity$SavedConfig -> com.salesforce.androidsdk.ui.t:
+    int currentSelection -> a
+    int originalStartingIndex -> b
+com.salesforce.androidsdk.util.EventsObservable -> com.salesforce.androidsdk.e.a:
+    com.salesforce.androidsdk.util.EventsObservable instance -> a
+    com.salesforce.androidsdk.util.EventsObservable get() -> a
+    void notifyEvent$63d9372b() -> b
+com.salesforce.androidsdk.util.EventsObservable$EventType -> com.salesforce.androidsdk.e.b:
+    com.salesforce.androidsdk.util.EventsObservable$EventType AppCreateComplete -> a
+    com.salesforce.androidsdk.util.EventsObservable$EventType AppLocked -> b
+    com.salesforce.androidsdk.util.EventsObservable$EventType AppUnlocked -> c
+    com.salesforce.androidsdk.util.EventsObservable$EventType RenditionComplete -> d
+    com.salesforce.androidsdk.util.EventsObservable$EventType[] $VALUES -> e
+    com.salesforce.androidsdk.util.EventsObservable$EventType[] values() -> values
+    com.salesforce.androidsdk.util.EventsObservable$EventType valueOf(java.lang.String) -> valueOf
+com.salesforce.androidsdk.util.UriFragmentParser -> com.salesforce.androidsdk.e.c:
+    boolean $assertionsDisabled -> a
+    java.util.Map parse(android.net.Uri) -> a
+    java.util.Map parse(java.lang.String) -> a
+example.EventDataSQLHelper -> example.a:
+    void onCreate(info.guardianproject.database.sqlcipher.SQLiteDatabase) -> a
+    void onUpgrade(info.guardianproject.database.sqlcipher.SQLiteDatabase,int,int) -> a
+example.SQLDemoActivity -> example.SQLDemoActivity:
+    example.EventDataSQLHelper eventsData -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void showEvents(android.database.Cursor) -> a
+info.guardianproject.database.AbstractCursor -> info.guardianproject.database.a:
+    android.database.DataSetObservable mDataSetObservable -> a
+    android.database.ContentObservable mContentObservable -> b
+    java.util.HashMap mUpdatedRows -> c
+    int mRowIdColumnIndex -> d
+    int mPos -> e
+    java.lang.Long mCurrentRowID -> f
+    android.content.ContentResolver mContentResolver -> g
+    boolean mClosed -> h
+    android.net.Uri mNotifyUri -> i
+    android.database.ContentObserver mSelfObserver -> j
+    java.lang.Object mSelfObserverLock -> k
+    boolean mSelfObserverRegistered -> l
+    int getCount() -> getCount
+    java.lang.String[] getColumnNames() -> getColumnNames
+    java.lang.String getString(int) -> getString
+    long getLong(int) -> getLong
+    byte[] getBlob(int) -> getBlob
+    info.guardianproject.database.CursorWindow getWindow() -> a
+    int getColumnCount() -> getColumnCount
+    void deactivate() -> deactivate
+    void deactivateInternal() -> e
+    boolean requery() -> requery
+    boolean isClosed() -> isClosed
+    void close() -> close
+    boolean onMove(int,int) -> onMove
+    void copyStringToBuffer(int,android.database.CharArrayBuffer) -> copyStringToBuffer
+    int getPosition() -> getPosition
+    boolean moveToPosition(int) -> moveToPosition
+    void fillWindow(int,android.database.CursorWindow) -> fillWindow
+    boolean move(int) -> move
+    boolean moveToFirst() -> moveToFirst
+    boolean moveToLast() -> moveToLast
+    boolean moveToNext() -> moveToNext
+    boolean moveToPrevious() -> moveToPrevious
+    boolean isFirst() -> isFirst
+    boolean isLast() -> isLast
+    boolean isBeforeFirst() -> isBeforeFirst
+    boolean isAfterLast() -> isAfterLast
+    int getColumnIndex(java.lang.String) -> getColumnIndex
+    int getColumnIndexOrThrow(java.lang.String) -> getColumnIndexOrThrow
+    java.lang.String getColumnName(int) -> getColumnName
+    void registerContentObserver(android.database.ContentObserver) -> registerContentObserver
+    void unregisterContentObserver(android.database.ContentObserver) -> unregisterContentObserver
+    void notifyDataSetChange() -> b
+    void registerDataSetObserver(android.database.DataSetObserver) -> registerDataSetObserver
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> unregisterDataSetObserver
+    void onChange$1385ff() -> c
+    void setNotificationUri(android.content.ContentResolver,android.net.Uri) -> setNotificationUri
+    boolean getWantsAllOnMoveCalls() -> getWantsAllOnMoveCalls
+    android.os.Bundle getExtras() -> getExtras
+    android.os.Bundle respond(android.os.Bundle) -> respond
+    boolean isFieldUpdated(int) -> a
+    java.lang.Object getUpdatedField(int) -> b
+    void checkPosition() -> d
+    void finalize() -> finalize
+    android.database.CursorWindow getWindow() -> getWindow
+info.guardianproject.database.AbstractCursor$SelfContentObserver -> info.guardianproject.database.b:
+    java.lang.ref.WeakReference mCursor -> a
+    boolean deliverSelfNotifications() -> deliverSelfNotifications
+    void onChange(boolean) -> onChange
+info.guardianproject.database.AbstractWindowedCursor -> info.guardianproject.database.c:
+    info.guardianproject.database.CursorWindow mWindow -> i
+    byte[] getBlob(int) -> getBlob
+    java.lang.String getString(int) -> getString
+    void copyStringToBuffer(int,android.database.CharArrayBuffer) -> copyStringToBuffer
+    short getShort(int) -> getShort
+    int getInt(int) -> getInt
+    long getLong(int) -> getLong
+    float getFloat(int) -> getFloat
+    double getDouble(int) -> getDouble
+    boolean isNull(int) -> isNull
+    void checkPosition() -> d
+    info.guardianproject.database.CursorWindow getWindow() -> a
+    android.database.CursorWindow getWindow() -> getWindow
+info.guardianproject.database.CrossProcessCursorWrapper -> info.guardianproject.database.d:
+    android.database.CursorWindow getWindow() -> getWindow
+    void fillWindow(int,android.database.CursorWindow) -> fillWindow
+    boolean onMove(int,int) -> onMove
+info.guardianproject.database.CursorIndexOutOfBoundsException -> info.guardianproject.database.e:
+info.guardianproject.database.CursorWindow -> info.guardianproject.database.CursorWindow:
+    int mStartPos -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int getStartPosition() -> getStartPosition
+    void setStartPosition(int) -> setStartPosition
+    int getNumRows() -> getNumRows
+    int getNumRows_native() -> getNumRows_native
+    boolean setNumColumns(int) -> setNumColumns
+    boolean setNumColumns_native(int) -> setNumColumns_native
+    boolean allocRow() -> allocRow
+    boolean allocRow_native() -> allocRow_native
+    void freeLastRow() -> freeLastRow
+    void freeLastRow_native() -> freeLastRow_native
+    boolean putBlob(byte[],int,int) -> putBlob
+    boolean putBlob_native(byte[],int,int) -> putBlob_native
+    boolean putString(java.lang.String,int,int) -> putString
+    boolean putString_native(java.lang.String,int,int) -> putString_native
+    boolean putLong(long,int,int) -> putLong
+    boolean putLong_native(long,int,int) -> putLong_native
+    boolean putDouble(double,int,int) -> putDouble
+    boolean putDouble_native(double,int,int) -> putDouble_native
+    boolean putNull(int,int) -> putNull
+    boolean putNull_native(int,int) -> putNull_native
+    boolean isNull(int,int) -> isNull
+    boolean isNull_native(int,int) -> isNull_native
+    byte[] getBlob(int,int) -> getBlob
+    byte[] getBlob_native(int,int) -> getBlob_native
+    boolean isBlob(int,int) -> isBlob
+    boolean isLong(int,int) -> isLong
+    boolean isFloat(int,int) -> isFloat
+    boolean isString(int,int) -> isString
+    boolean isBlob_native(int,int) -> isBlob_native
+    boolean isString_native(int,int) -> isString_native
+    boolean isInteger_native(int,int) -> isInteger_native
+    boolean isFloat_native(int,int) -> isFloat_native
+    java.lang.String getString(int,int) -> getString
+    java.lang.String getString_native(int,int) -> getString_native
+    void copyStringToBuffer(int,int,android.database.CharArrayBuffer) -> copyStringToBuffer
+    char[] copyStringToBuffer_native(int,int,int,android.database.CharArrayBuffer) -> copyStringToBuffer_native
+    long getLong(int,int) -> getLong
+    long getLong_native(int,int) -> getLong_native
+    double getDouble(int,int) -> getDouble
+    double getDouble_native(int,int) -> getDouble_native
+    short getShort(int,int) -> getShort
+    int getInt(int,int) -> getInt
+    float getFloat(int,int) -> getFloat
+    void clear() -> clear
+    void native_clear() -> native_clear
+    void close() -> close
+    void close_native() -> close_native
+    void finalize() -> finalize
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    android.os.IBinder native_getBinder() -> native_getBinder
+    void native_init(boolean) -> native_init
+    void native_init(android.os.IBinder) -> native_init
+    void onAllReferencesReleased() -> onAllReferencesReleased
+info.guardianproject.database.CursorWindow$1 -> info.guardianproject.database.f:
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+info.guardianproject.database.DatabaseUtils -> info.guardianproject.database.g:
+    java.lang.String[] countProjection -> a
+    java.text.Collator mColl -> b
+    void bindObjectToProgram(info.guardianproject.database.sqlcipher.SQLiteProgram,int,java.lang.Object) -> a
+info.guardianproject.database.DatabaseUtils$InsertHelper -> info.guardianproject.database.h:
+    java.util.HashMap mColumns -> a
+    java.lang.String mInsertSQL -> b
+    info.guardianproject.database.sqlcipher.SQLiteStatement mInsertStatement -> c
+    info.guardianproject.database.sqlcipher.SQLiteStatement mReplaceStatement -> d
+    void close() -> a
+info.guardianproject.database.SQLException -> info.guardianproject.database.i:
+info.guardianproject.database.StaleDataException -> info.guardianproject.database.j:
+info.guardianproject.database.sqlcipher.DatabaseObjectNotClosedException -> info.guardianproject.database.sqlcipher.a:
+info.guardianproject.database.sqlcipher.SQLiteClosable -> info.guardianproject.database.sqlcipher.b:
+    int mReferenceCount -> a
+    java.lang.Object mLock -> b
+    void onAllReferencesReleased() -> a
+    void onAllReferencesReleasedFromContainer() -> b
+    void acquireReference() -> c
+    void releaseReference() -> d
+info.guardianproject.database.sqlcipher.SQLiteCompiledSql -> info.guardianproject.database.sqlcipher.SQLiteCompiledSql:
+    info.guardianproject.database.sqlcipher.SQLiteDatabase mDatabase -> a
+    int nHandle -> b
+    int nStatement -> c
+    java.lang.String mSqlStmt -> d
+    java.lang.Throwable mStackTrace -> e
+    boolean mInUse -> f
+    void releaseSqlStatement() -> a
+    boolean acquire() -> b
+    void release() -> c
+    void finalize() -> finalize
+    void native_compile(java.lang.String) -> native_compile
+    void native_finalize() -> native_finalize
+info.guardianproject.database.sqlcipher.SQLiteCursor -> info.guardianproject.database.sqlcipher.c:
+    java.lang.String mEditTable -> k
+    java.lang.String[] mColumns -> l
+    info.guardianproject.database.sqlcipher.SQLiteQuery mQuery -> m
+    info.guardianproject.database.sqlcipher.SQLiteDatabase mDatabase -> n
+    info.guardianproject.database.sqlcipher.SQLiteCursorDriver mDriver -> o
+    int mCount -> p
+    java.util.Map mColumnNameMap -> q
+    java.lang.Throwable mStackTrace -> r
+    int mMaxRead -> s
+    int mInitialRead -> t
+    int mCursorState -> u
+    java.util.concurrent.locks.ReentrantLock mLock -> v
+    boolean mPendingData -> w
+    info.guardianproject.database.sqlcipher.SQLiteCursor$MainThreadNotificationHandler mNotificationHandler -> j
+    void queryThreadLock() -> e
+    void queryThreadUnlock() -> f
+    void registerDataSetObserver(android.database.DataSetObserver) -> registerDataSetObserver
+    boolean onMove(int,int) -> onMove
+    int getCount() -> getCount
+    void fillWindow(int) -> c
+    int getColumnIndex(java.lang.String) -> getColumnIndex
+    java.lang.String[] getColumnNames() -> getColumnNames
+    void deactivateCommon() -> g
+    void deactivate() -> deactivate
+    void close() -> close
+    boolean requery() -> requery
+    void finalize() -> finalize
+    void fillWindow(int,android.database.CursorWindow) -> fillWindow
+    boolean access$002(info.guardianproject.database.sqlcipher.SQLiteCursor,boolean) -> a
+    info.guardianproject.database.CursorWindow access$100(info.guardianproject.database.sqlcipher.SQLiteCursor) -> a
+    java.util.concurrent.locks.ReentrantLock access$200(info.guardianproject.database.sqlcipher.SQLiteCursor) -> b
+    int access$300(info.guardianproject.database.sqlcipher.SQLiteCursor) -> c
+    int access$400(info.guardianproject.database.sqlcipher.SQLiteCursor) -> d
+    int access$500(info.guardianproject.database.sqlcipher.SQLiteCursor) -> e
+    info.guardianproject.database.sqlcipher.SQLiteQuery access$600(info.guardianproject.database.sqlcipher.SQLiteCursor) -> f
+    int access$512(info.guardianproject.database.sqlcipher.SQLiteCursor,int) -> a
+    int access$502(info.guardianproject.database.sqlcipher.SQLiteCursor,int) -> b
+    void access$700(info.guardianproject.database.sqlcipher.SQLiteCursor) -> g
+info.guardianproject.database.sqlcipher.SQLiteCursor$MainThreadNotificationHandler -> info.guardianproject.database.sqlcipher.d:
+    info.guardianproject.database.sqlcipher.SQLiteCursor this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+info.guardianproject.database.sqlcipher.SQLiteCursor$QueryThread -> info.guardianproject.database.sqlcipher.e:
+    int mThreadState -> b
+    info.guardianproject.database.sqlcipher.SQLiteCursor this$0 -> a
+    void sendMessage() -> a
+    void run() -> run
+info.guardianproject.database.sqlcipher.SQLiteCursorDriver -> info.guardianproject.database.sqlcipher.f:
+    android.database.Cursor query(info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory,java.lang.String[]) -> a
+    void cursorClosed() -> a
+info.guardianproject.database.sqlcipher.SQLiteDatabase -> info.guardianproject.database.sqlcipher.SQLiteDatabase:
+    java.lang.String[] CONFLICT_VALUES -> d
+    boolean mInnerTransactionIsSuccessful -> e
+    boolean mTransactionIsSuccessful -> f
+    info.guardianproject.database.sqlcipher.SQLiteTransactionListener mTransactionListener -> g
+    java.util.concurrent.locks.ReentrantLock mLock -> h
+    long mLockAcquiredWallTime -> i
+    long mLockAcquiredThreadTime -> j
+    java.util.regex.Pattern EMAIL_IN_DB_PATTERN -> k
+    long mLastLockMessageTime -> l
+    int sQueryLogTimeInMillis -> m
+    java.util.Random mRandom -> n
+    java.lang.String mLastSqlStatement -> o
+    int mNativeHandle -> a
+    int mTempTableSequence -> b
+    java.lang.String mPath -> p
+    java.lang.String mPathForLogs -> q
+    int mFlags -> r
+    info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory mFactory -> s
+    java.util.WeakHashMap mPrograms -> t
+    java.util.Map mCompiledQueries -> c
+    int mMaxSqlCacheSize -> u
+    int mCacheFullWarnings -> v
+    int mNumCacheHits -> w
+    int mNumCacheMisses -> x
+    java.lang.String mTimeOpened -> y
+    java.lang.String mTimeClosed -> z
+    java.lang.Throwable mStackTrace -> A
+    int mSlowQueryThreshold -> B
+    boolean mLockingEnabled -> C
+    java.util.Map mSyncUpdateInfo -> D
+    void loadICUData(android.content.Context) -> b
+    void loadLibs(android.content.Context) -> a
+    void addSQLiteClosable(info.guardianproject.database.sqlcipher.SQLiteClosable) -> a
+    void removeSQLiteClosable(info.guardianproject.database.sqlcipher.SQLiteClosable) -> b
+    void onAllReferencesReleased() -> a
+    void onCorruption() -> e
+    void lock() -> f
+    void unlock() -> g
+    void unlockForced() -> p
+    void checkLockHoldTime() -> q
+    void beginTransaction() -> h
+    void endTransaction() -> i
+    void setTransactionSuccessful() -> j
+    info.guardianproject.database.sqlcipher.SQLiteDatabase openDatabase(java.lang.String,java.lang.String,info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory,int) -> a
+    info.guardianproject.database.sqlcipher.SQLiteDatabase openOrCreateDatabase(java.lang.String,java.lang.String,info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory) -> a
+    info.guardianproject.database.sqlcipher.SQLiteDatabase create$7414c339(java.lang.String) -> a
+    void close() -> k
+    void closeClosable() -> r
+    void dbclose() -> dbclose
+    int getVersion() -> l
+    void setVersion(int) -> a
+    info.guardianproject.database.sqlcipher.SQLiteStatement compileStatement(java.lang.String) -> e
+    android.database.Cursor query$4c79410e$18cfc304$780d7590(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[]) -> b
+    android.database.Cursor query$1749d206(java.lang.String) -> b
+    android.database.Cursor query$18cfc304$780d7590(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[]) -> a
+    android.database.Cursor rawQueryWithFactory$4e52c6db(java.lang.String,java.lang.String[],java.lang.String) -> a
+    long insert$62bb5379(java.lang.String,android.content.ContentValues) -> a
+    long insertWithOnConflict$b5158c4$62bb5379(java.lang.String,android.content.ContentValues) -> b
+    int delete(java.lang.String,java.lang.String,java.lang.String[]) -> a
+    void execSQL(java.lang.String) -> c
+    void finalize() -> finalize
+    java.lang.String getTime() -> s
+    boolean isReadOnly() -> m
+    boolean isOpen() -> n
+    java.lang.String getPath() -> o
+    void logTimeStat(java.lang.String,long) -> a
+    void logTimeStat(java.lang.String,long,java.lang.String) -> a
+    void addToCompiledQueries(java.lang.String,info.guardianproject.database.sqlcipher.SQLiteCompiledSql) -> a
+    info.guardianproject.database.sqlcipher.SQLiteCompiledSql getCompiledStatementForSql(java.lang.String) -> d
+    void setICURoot(java.lang.String) -> setICURoot
+    void dbopen(java.lang.String,int) -> dbopen
+    void enableSqlTracing(java.lang.String) -> enableSqlTracing
+    void enableSqlProfiling(java.lang.String) -> enableSqlProfiling
+    void native_execSQL(java.lang.String) -> native_execSQL
+    void native_setLocale(java.lang.String,int) -> native_setLocale
+    long lastInsertRow() -> lastInsertRow
+    int lastChangeCount() -> lastChangeCount
+info.guardianproject.database.sqlcipher.SQLiteDatabase$ActiveDatabases -> info.guardianproject.database.sqlcipher.g:
+    info.guardianproject.database.sqlcipher.SQLiteDatabase$ActiveDatabases activeDatabases -> a
+    java.util.HashSet mActiveDatabases -> b
+    info.guardianproject.database.sqlcipher.SQLiteDatabase$ActiveDatabases getInstance() -> a
+    java.util.HashSet access$000(info.guardianproject.database.sqlcipher.SQLiteDatabase$ActiveDatabases) -> a
+info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory -> info.guardianproject.database.sqlcipher.h:
+    android.database.Cursor newCursor$197aa1fa() -> a
+info.guardianproject.database.sqlcipher.SQLiteDatabaseCorruptException -> info.guardianproject.database.sqlcipher.i:
+info.guardianproject.database.sqlcipher.SQLiteDebug -> info.guardianproject.database.sqlcipher.j:
+    boolean DEBUG_SQL_STATEMENTS -> a
+    boolean DEBUG_SQL_TIME -> b
+    boolean DEBUG_SQL_CACHE -> c
+    boolean DEBUG_ACTIVE_CURSOR_FINALIZATION -> d
+    boolean DEBUG_LOCK_TIME_TRACKING -> e
+    boolean DEBUG_LOCK_TIME_TRACKING_STACK_TRACE -> f
+    int sNumActiveCursorsFinalized -> g
+    void notifyActiveCursorFinalized() -> a
+info.guardianproject.database.sqlcipher.SQLiteDirectCursorDriver -> info.guardianproject.database.sqlcipher.k:
+    java.lang.String mEditTable -> a
+    info.guardianproject.database.sqlcipher.SQLiteDatabase mDatabase -> b
+    android.database.Cursor mCursor -> c
+    java.lang.String mSql -> d
+    info.guardianproject.database.sqlcipher.SQLiteQuery mQuery -> e
+    android.database.Cursor query(info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory,java.lang.String[]) -> a
+    void cursorClosed() -> a
+    java.lang.String toString() -> toString
+info.guardianproject.database.sqlcipher.SQLiteException -> info.guardianproject.database.sqlcipher.l:
+info.guardianproject.database.sqlcipher.SQLiteMisuseException -> info.guardianproject.database.sqlcipher.m:
+info.guardianproject.database.sqlcipher.SQLiteOpenHelper -> info.guardianproject.database.sqlcipher.n:
+    java.lang.String TAG -> a
+    android.content.Context mContext -> b
+    java.lang.String mName -> c
+    info.guardianproject.database.sqlcipher.SQLiteDatabase$CursorFactory mFactory -> d
+    int mNewVersion -> e
+    info.guardianproject.database.sqlcipher.SQLiteDatabase mDatabase -> f
+    boolean mIsInitializing -> g
+    info.guardianproject.database.sqlcipher.SQLiteDatabase getWritableDatabase(java.lang.String) -> a
+    info.guardianproject.database.sqlcipher.SQLiteDatabase getReadableDatabase(java.lang.String) -> b
+    void close() -> a
+    void onCreate(info.guardianproject.database.sqlcipher.SQLiteDatabase) -> a
+    void onUpgrade(info.guardianproject.database.sqlcipher.SQLiteDatabase,int,int) -> a
+info.guardianproject.database.sqlcipher.SQLiteProgram -> info.guardianproject.database.sqlcipher.SQLiteProgram:
+    info.guardianproject.database.sqlcipher.SQLiteDatabase mDatabase -> a
+    java.lang.String mSql -> b
+    int nHandle -> c
+    info.guardianproject.database.sqlcipher.SQLiteCompiledSql mCompiledSql -> e
+    int nStatement -> d
+    void onAllReferencesReleased() -> a
+    void onAllReferencesReleasedFromContainer() -> b
+    void releaseCompiledSqlIfNotInCache() -> f
+    void bindNull(int) -> a
+    void bindLong(int,long) -> a
+    void bindDouble(int,double) -> a
+    void bindString(int,java.lang.String) -> a
+    void bindBlob(int,byte[]) -> a
+    void close() -> e
+    void native_bind_null(int) -> native_bind_null
+    void native_bind_long(int,long) -> native_bind_long
+    void native_bind_double(int,double) -> native_bind_double
+    void native_bind_string(int,java.lang.String) -> native_bind_string
+    void native_bind_blob(int,byte[]) -> native_bind_blob
+info.guardianproject.database.sqlcipher.SQLiteQuery -> info.guardianproject.database.sqlcipher.SQLiteQuery:
+    int mOffsetIndex -> e
+    java.lang.String[] mBindArgs -> f
+    boolean mClosed -> g
+    int fillWindow(info.guardianproject.database.CursorWindow,int,int) -> a
+    int columnCountLocked() -> f
+    java.lang.String columnNameLocked(int) -> b
+    java.lang.String toString() -> toString
+    void close() -> e
+    void requery() -> g
+    void bindNull(int) -> a
+    void bindLong(int,long) -> a
+    void bindDouble(int,double) -> a
+    void bindString(int,java.lang.String) -> a
+    int native_fill_window(info.guardianproject.database.CursorWindow,int,int,int,int) -> native_fill_window
+    int native_column_count() -> native_column_count
+    java.lang.String native_column_name(int) -> native_column_name
+info.guardianproject.database.sqlcipher.SQLiteQueryBuilder -> info.guardianproject.database.sqlcipher.o:
+    java.util.regex.Pattern sLimitPattern -> a
+    java.lang.String buildQueryString$3d644748$3f823dd2$29c2ea3e(java.lang.String,java.lang.String[],java.lang.String) -> a
+    void appendClause(java.lang.StringBuilder,java.lang.String,java.lang.String) -> a
+    void appendColumns(java.lang.StringBuilder,java.lang.String[]) -> a
+info.guardianproject.database.sqlcipher.SQLiteStatement -> info.guardianproject.database.sqlcipher.SQLiteStatement:
+    void execute() -> f
+    long simpleQueryForLong() -> g
+    void native_execute() -> native_execute
+    long native_1x1_long() -> native_1x1_long
+info.guardianproject.database.sqlcipher.SQLiteTransactionListener -> info.guardianproject.database.sqlcipher.p:

@@ -1,12 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_new_picture"
-        android:icon="@drawable/newpic"
-        android:showAsAction="always"/>
-    <item
         android:id="@+id/menu_logout"
         android:icon="@drawable/ic_action_logout"
-        android:showAsAction="ifRoom" android:title="Logout"/>
+        android:showAsAction="ifRoom"
+        android:title="Logout"/>
 
 </menu>
